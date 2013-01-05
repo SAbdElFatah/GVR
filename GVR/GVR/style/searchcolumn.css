@@ -1,0 +1,439 @@
+#id-HC-Searchbox1, #id-HC-Searchbox1 div, #id-HC-Searchbox1 span, #id-HC-Searchbox1 .hcw_popularCitiesContainer ul, #id-HC-Searchbox1 .hcw_popularCitiesContainer li {
+    border: 0 none;
+    font-size: 100%;
+    line-height: 1;
+    margin: 0;
+    outline: 0 none;
+    padding: 0;
+    vertical-align: baseline;
+}
+#id-HC-Searchbox1 .hcw_popularCitiesContainer ul {
+    list-style: none outside none;
+}
+#id-HC-Searchbox1 *:focus {
+    outline: 0 none;
+}
+#id-HC-Searchbox1 {
+    /*background: url("http://www.hcsearchbox.com/NewSearchBox/newSearchBg.png") no-repeat scroll 0 0 transparent;*/
+    height: 370px;
+    margin: 0;
+    padding: 0;
+    position: relative;
+    width: 265px;
+}
+#id-HC-Searchbox1 .hcw_guestsLabel {
+    color: #000000;
+    font-size: 13px;
+    font-weight: bold;
+    left: 17px;
+    position: absolute;
+    top: 137px;
+}
+#id-HC-Searchbox1 .hcw_guests {
+    -moz-font-feature-settings: normal;
+    -moz-font-language-override: normal;
+    border-color: #ACADB2 #E3E2EA #E3E2EA;
+    /*border-radius: 5px 5px 5px 5px;*/
+    border-style: solid;
+    border-width: 1px;
+    color: #4E4E4E;
+    font-family: arial,helvetica,sans-serif;
+    font-size: 14px;
+    font-size-adjust: none;
+    font-stretch: normal;
+    font-style: normal;
+    font-variant: normal;
+    font-weight: normal;
+    height: 30px;
+    left: 41px;
+    line-height: 30px !important;
+    margin: 0;
+    padding: 6px;
+    position: absolute;
+    top: 290px;
+    width: 80px;
+}
+/******/
+#id-HC-Searchbox1 .hcw_roomsLabel {
+    color: #000000;
+    font-size: 13px;
+    font-weight: bold;
+    left: 135px;
+    position: absolute;
+    top: 137px;
+}
+#id-HC-Searchbox1 .hcw_topTitle {
+    color: #FFFFFF;
+    font-size: 18px;
+    font-weight: bold;
+    left: 15px;
+    line-height: 22px;
+    position: absolute;
+    /*top: 13px;*/
+    width: 200px;
+}
+#id-HC-Searchbox1 .hcw_citySearchLabel {
+    color: #000000;
+    font-size: 13px;
+    font-weight: bold;
+    left: 17px;
+    position: absolute;
+    top: 82px;
+}
+#id-HC-Searchbox1 .hcw_hotelCheckinLabel {
+    color: #000000;
+    font-size: 13px;
+    font-weight: bold;
+    left: 17px;
+    position: absolute;
+    top: 15px;
+}
+#id-HC-Searchbox1 .hcw_hotelCheckinGraphic {
+    background: url("http://www.hcsearchbox.com/NewSearchBox/newCalendar.png") repeat scroll 0 0 transparent;
+    height: 24px;
+    left: 14px;
+    position: absolute;
+    top: 35px;
+    width: 25px;
+}
+#id-HC-Searchbox1 .hcw_hotelCheckoutLabel {
+    color: #000000;
+    font-size: 13px;
+    font-weight: bold;
+    left: 17px;
+    position: absolute;
+    top: 70px;
+}
+#id-HC-Searchbox1 .hcw_hotelCheckoutGraphic {
+    background: url("http://www.hcsearchbox.com/NewSearchBox/newCalendar.png") repeat scroll 0 0 transparent;
+    height: 24px;
+    left: 14px;
+    position: absolute;
+    top: 90px;
+    width: 25px;
+}
+#id-HC-Searchbox1 .hcw_hotelCheckin_day {
+    -moz-font-feature-settings: normal;
+    -moz-font-language-override: normal;
+    border-color: #ACADB2 #E3E2EA #E3E2EA;
+    /*border-radius: 5px 5px 5px 5px;*/
+    border-style: solid;
+    border-width: 1px;
+    color: #4E4E4E;
+    font-family: arial,helvetica,sans-serif;
+    font-size: 14px;
+    font-size-adjust: none;
+    font-stretch: normal;
+    font-style: normal;
+    font-variant: normal;
+    font-weight: normal;
+    height: 30px;
+    left: 41px;
+    line-height: 30px !important;
+    margin: 0;
+    padding: 6px;
+    padding-left:4px;
+    position: absolute;
+    top: 35px;
+    width: 78px;
+}
+#id-HC-Searchbox1 .hcw_hotelCheckin_month {
+    -moz-font-feature-settings: normal;
+    -moz-font-language-override: normal;
+    border-color: #ACADB2 #E3E2EA #E3E2EA;
+    /*border-radius: 5px 5px 5px 5px;*/
+    border-style: solid;
+    border-width: 1px;
+    color: #4E4E4E;
+    font-family: arial,helvetica,sans-serif;
+    font-size: 14px;
+    font-size-adjust: none;
+    font-stretch: normal;
+    font-style: normal;
+    font-variant: normal;
+    font-weight: normal;
+    height: 30px;
+    left: 123px;
+    line-height: 30px !important;
+    margin: 0;
+    padding: 6px;
+    position: absolute;
+    top: 35px;
+    width: 90px;
+}
+#id-HC-Searchbox1 .hcw_hotelCheckout_day {
+    -moz-font-feature-settings: normal;
+    -moz-font-language-override: normal;
+    border-color: #ACADB2 #E3E2EA #E3E2EA;
+    /*border-radius: 5px 5px 5px 5px;*/
+    border-style: solid;
+    border-width: 1px;
+    color: #4E4E4E;
+    font-family: arial,helvetica,sans-serif;
+    font-size: 14px;
+    font-size-adjust: none;
+    font-stretch: normal;
+    font-style: normal;
+    font-variant: normal;
+    font-weight: normal;
+    height: 30px;
+    left: 41px;
+    line-height: 30px !important;
+    margin: 0;
+    padding: 6px;
+    padding-left: 4px;
+    position: absolute;
+    top: 90px;
+    width: 78px;
+}
+#id-HC-Searchbox1 .hcw_hotelCheckout_month {
+    -moz-font-feature-settings: normal;
+    -moz-font-language-override: normal;
+    border-color: #ACADB2 #E3E2EA #E3E2EA;
+    /*border-radius: 5px 5px 5px 5px;*/
+    border-style: solid;
+    border-width: 1px;
+    color: #4E4E4E;
+    font-family: arial,helvetica,sans-serif;
+    font-size: 14px;
+    font-size-adjust: none;
+    font-stretch: normal;
+    font-style: normal;
+    font-variant: normal;
+    font-weight: normal;
+    height: 30px;
+    left: 123px;
+    line-height: 30px !important;
+    margin: 0;
+    padding: 6px;
+    position: absolute;
+    top: 90px;
+    width: 90px;
+}
+#id-HC-Searchbox1 .hcw_guests {
+    -moz-font-feature-settings: normal;
+    -moz-font-language-override: normal;
+    border-color: #ACADB2 #E3E2EA #E3E2EA;
+    /*border-radius: 5px 5px 5px 5px;*/
+    border-style: solid;
+    border-width: 1px;
+    color: #4E4E4E;
+    font-family: arial,helvetica,sans-serif;
+    font-size: 14px;
+    font-size-adjust: none;
+    font-stretch: normal;
+    font-style: normal;
+    font-variant: normal;
+    font-weight: normal;
+    height: 30px;
+    left: 41px;
+    line-height: 30px !important;
+    margin: 0;
+    padding: 6px;
+    position: absolute;
+    top: 151px;
+    width: 80px;
+}
+#id-HC-Searchbox1 .hcw_rooms {
+    -moz-font-feature-settings: normal;
+    -moz-font-language-override: normal;
+    border-color: #ACADB2 #E3E2EA #E3E2EA;
+    /*border-radius: 5px 5px 5px 5px;*/
+    border-style: solid;
+    border-width: 1px;
+    color: #4E4E4E;
+    font-family: arial,helvetica,sans-serif;
+    font-size: 14px;
+    font-size-adjust: none;
+    font-stretch: normal;
+    font-style: normal;
+    font-variant: normal;
+    font-weight: normal;
+    height: 30px;
+    left: 138px;
+    line-height: 30px !important;
+    margin: 0;
+    padding: 6px;
+    position: absolute;
+    top: 151px;
+    width: 80px;
+}
+#id-HC-Searchbox1 .hcw_citySearch, #id-HC-Searchbox1 .hcw_cityPulldown {
+    border-color: #ACADB2 #E3E2EA #E3E2EA;
+    /*border-radius: 5px 5px 5px 5px;*/
+    border-style: solid;
+    border-width: 1px;
+    color: #4E4E4E;
+    font: 14px arial,helvetica,sans-serif;
+    left: 15px;
+    margin: 0;
+    padding: 6px 5px;
+    position: absolute;
+    text-align: left;
+    text-indent: 5px;
+    top: 100px;
+    width: 220px;
+}
+#id-HC-Searchbox1 .hcw_searchButton {
+    background: url("http://www.hcsearchbox.com/NewSearchBox/newSearchButton.png") no-repeat scroll 0 0 transparent;
+    border: medium none;
+	border-radius: 5px 5px 5px 5px;
+    color: white;
+	text-align:center;
+    cursor: pointer;
+    font-family: arial,helvetica,sans-serif;
+    font-size: 18px;
+    font-weight: bold;
+    height: 45px;
+    left: 180px;
+    margin: 0;
+    padding: 3px 0 0;
+    position: absolute;
+    text-indent: -30px;
+    text-shadow: -1px -1px 0 #598810;
+    top: 365px;
+    width: 80px;
+}
+#id-HC-Searchbox1 .hcw_popularCitiesContainer {
+    display: none;
+}
+#id-HC-Searchbox1 .hcw_errorText {
+    background-color: #F9CCCA !important;
+}
+/****/
+#id-HC-Searchbox1 .hcw_placeLabel {
+    color: #000000;
+    font-size: 13px;
+    font-weight: bold;
+    left: 17px;
+    position: absolute;
+    top: 190px;
+}
+#id-HC-Searchbox1 .hcw_place {
+    -moz-font-feature-settings: normal;
+    -moz-font-language-override: normal;
+    border-color: #ACADB2 #E3E2EA #E3E2EA;
+    /*border-radius: 5px 5px 5px 5px;*/
+    border-style: solid;
+    border-width: 1px;
+    color: #4E4E4E;
+    font-family: arial,helvetica,sans-serif;
+    font-size: 14px;
+    font-size-adjust: none;
+    font-stretch: normal;
+    font-style: normal;
+    font-variant: normal;
+    font-weight: normal;
+    height: 30px;
+    left: 41px;
+    line-height: 30px !important;
+    margin: 0;
+    padding: 6px;
+    position: absolute;
+    top: 210px;
+    width: 80px;
+}
+/******/
+
+/****/
+#id-HC-Searchbox1 .hcw_floorLabel {
+    color: #000000;
+    font-size: 13px;
+    font-weight: bold;
+    left: 17px;
+    position: absolute;
+    top: 250px;
+}
+#id-HC-Searchbox1 .hcw_floor {
+    -moz-font-feature-settings: normal;
+    -moz-font-language-override: normal;
+    border-color: #ACADB2 #E3E2EA #E3E2EA;
+    /*border-radius: 5px 5px 5px 5px;*/
+    border-style: solid;
+    border-width: 1px;
+    color: #4E4E4E;
+    font-family: arial,helvetica,sans-serif;
+    font-size: 14px;
+    font-size-adjust: none;
+    font-stretch: normal;
+    font-style: normal;
+    font-variant: normal;
+    font-weight: normal;
+    height: 30px;
+    left: 41px;
+    line-height: 30px !important;
+    margin: 0;
+    padding: 6px;
+    position: absolute;
+    top: 270px;
+    width: 80px;
+}
+/******/
+
+/******/
+#id-HC-Searchbox1 .hcw_typeLabel {
+    color: #000000;
+    font-size: 13px;
+    font-weight: bold;
+    left: 135px;
+    position: absolute;
+    top: 190px;
+}
+#id-HC-Searchbox1 .hcw_type {
+    -moz-font-feature-settings: normal;
+    -moz-font-language-override: normal;
+    border-color: #ACADB2 #E3E2EA #E3E2EA;
+    /*border-radius: 5px 5px 5px 5px;*/
+    border-style: solid;
+    border-width: 1px;
+    color: #4E4E4E;
+    font-family: arial,helvetica,sans-serif;
+    font-size: 14px;
+    font-size-adjust: none;
+    font-stretch: normal;
+    font-style: normal;
+    font-variant: normal;
+    font-weight: normal;
+    height: 30px;
+    left: 138px;
+    line-height: 30px !important;
+    margin: 0;
+    padding: 6px;
+    position: absolute;
+    top: 210px;
+    width: 80px;
+}
+/******/
+#id-HC-Searchbox1 .hcw_roomLabel {
+    color: #000000;
+    font-size: 13px;
+    font-weight: bold;
+    left: 135px;
+    position: absolute;
+    top: 250px;
+}
+#id-HC-Searchbox1 .hcw_room {
+    -moz-font-feature-settings: normal;
+    -moz-font-language-override: normal;
+    border-color: #ACADB2 #E3E2EA #E3E2EA;
+    /*border-radius: 5px 5px 5px 5px;*/
+    border-style: solid;
+    border-width: 1px;
+    color: #4E4E4E;
+    font-family: arial,helvetica,sans-serif;
+    font-size: 14px;
+    font-size-adjust: none;
+    font-stretch: normal;
+    font-style: normal;
+    font-variant: normal;
+    font-weight: normal;
+    height: 30px;
+    left: 138px;
+    line-height: 30px !important;
+    margin: 0;
+    padding: 6px;
+    position: absolute;
+    top: 270px;
+    width: 80px;
+}
+

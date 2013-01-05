@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="2.0" xmlns:edmx="http://schemas.microsoft.com/ado/2008/10/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2008/10/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="a1d0b0c99ae941858938299106e77fcf" Name="Diagram1">
+        <EntityTypeShape EntityType="GVRModel.Client" Width="1.5" PointX="0.75" PointY="14.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="GVRModel.Currency" Width="1.5" PointX="3" PointY="27.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="GVRModel.ElectricalAppliance" Width="1.5" PointX="6" PointY="13.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="GVRModel.OverLookingView" Width="1.5" PointX="3" PointY="5.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="GVRModel.Owner_Currency" Width="1.5" PointX="5.25" PointY="24.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="GVRModel.OwnerRent" Width="1.5" PointX="5.25" PointY="19.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="GVRModel.sysdiagrams" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="GVRModel.Tanent_OverLokkingView" Width="1.5" PointX="5.25" PointY="9.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="GVRModel.TanentApplication" Width="1.5" PointX="3" PointY="8.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="GVRModel.TanentRent" Width="1.5" PointX="8.25" PointY="19.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="GVRModel.Unit" Width="1.5" PointX="3" PointY="18.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="GVRModel.Unit_ElectricalAppliance" Width="1.5" PointX="8.25" PointY="23.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="GVRModel.Unit_OverLookingView" Width="1.5" PointX="5.25" PointY="16.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="GVRModel.UnitEditHistory" Width="1.5" PointX="5.25" PointY="29.75" IsExpanded="true" />
+        <AssociationConnector Association="GVRModel.FK_TanentApplication_Client" ManuallyRouted="false" />
+        <AssociationConnector Association="GVRModel.FK_TanentRent_Client" ManuallyRouted="false" />
+        <AssociationConnector Association="GVRModel.FK_Unit_Client" ManuallyRouted="false" />
+        <AssociationConnector Association="GVRModel.FK_Owner_Currency_Currency" ManuallyRouted="false" />
+        <AssociationConnector Association="GVRModel.FK_Unit_ElectricalAppliance_ElectricalAppliance" ManuallyRouted="false" />
+        <AssociationConnector Association="GVRModel.FK_Tanent_OverLokkingView_OverLookingView" ManuallyRouted="false" />
+        <AssociationConnector Association="GVRModel.FK_Unit_OverLookingView_OverLookingView" ManuallyRouted="false" />
+        <AssociationConnector Association="GVRModel.FK_OwnerCurrencyTable_Unit" ManuallyRouted="false" />
+        <AssociationConnector Association="GVRModel.FK_OwnerRent_Unit" ManuallyRouted="false" />
+        <AssociationConnector Association="GVRModel.FK_Tanent_OverLokkingView_TanentApplication" ManuallyRouted="false" />
+        <AssociationConnector Association="GVRModel.FK_TanentRent_Unit" ManuallyRouted="false" />
+        <AssociationConnector Association="GVRModel.FK_ElectricalAppliance_Unit" ManuallyRouted="false" />
+        <AssociationConnector Association="GVRModel.FK_Unit_Edit_Unit" ManuallyRouted="false" />
+        <AssociationConnector Association="GVRModel.FK_Unit_OverLookingView_Unit" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

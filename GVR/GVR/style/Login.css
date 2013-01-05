@@ -1,0 +1,234 @@
+﻿.cont {
+    background-color: #ffffff;
+    width: 650px;
+    padding: 30px;
+    padding-bottom: 20px;
+    /*border: 1px solid #D8D7D;*/
+    border: 1px solid #254A73;
+   /* min-height: 300px;*/
+     border-radius: 15px;
+	-moz-border-radius: 15px;
+	-webkit-border-radius: 15px;
+    /*behavior: url(PIE.htc);*/
+   /* margin-bottom: 80px;*/
+    margin-top: 30px; /*20px;*/
+    margin-left:110px;
+    
+}
+
+.form_cont {
+    width: 55%;
+    float: left;
+}
+
+.signup_box {
+    width: 35%;
+    float: right;
+    padding-left: 40px;
+}
+
+.form dl {
+    clear: both;
+    margin-bottom: 12px;
+}
+
+.form dt {
+    text-align: left;
+    padding-bottom: 2px;
+    font: bold 13px "Trebuchet MS", Arial, Helvetica, sans-serif;
+}
+
+
+.form .txtbox{
+    width: 228px;
+    background:  transparent url('../images/reg_text_box_bg.png') repeat-x scroll 0% 0%;
+    border: none;
+    padding: 7px;
+    max-height: 32px;
+    border: 1px solid #d8d7d7;
+    font:  12px "Trebuchet MS", Arial, Helvetica, sans-serif;
+    /*color: #666666;*/
+    border-radius: 7px;
+	-moz-border-radius: 7px;
+	-webkit-border-radius: 7px;
+   /* behavior: url(PIE.htc);*/
+}
+
+
+.login_btn {
+    font: bold  15px "Trebuchet MS", Arial, Helvetica, sans-serif;
+    padding: 5px 10px;
+    margin-left: 180px;
+}
+
+.signup_box {
+    height: 244px;
+    background:  transparent url("images/right_shaded_separator.png") no-repeat scroll left top;
+}
+
+.signup_box p {
+    text-align: center;
+}
+
+.btn_cont {
+    margin-top: 20px;
+    margin-bottom: 15px;
+}
+
+.sign_up_btn {
+   display: block;
+   margin-left: auto;
+   margin-right: auto;
+   text-indent: -9999em;
+   padding: 8px 10px;
+   width: 201px;
+   height: 42px;
+   outline: 0;
+   background:  transparent url("images/sign_up_now_btn2.png") no-repeat scroll 0% 0%;
+}
+
+
+.sign_up_btn:hover {
+ 
+   background:  transparent url("images/sign_up_now_btn2_hover.png") no-repeat scroll 0% 0%;
+}
+
+
+.tour .cont, .features .cont {
+   background-color: #ffffff;
+    width: 920px;
+    padding: 30px;
+    padding-bottom: 20px;
+    border: 1px solid #D8D7D7;
+   /*min-height: 300px;*/
+     border-radius: 15px;
+	-moz-border-radius: 15px;
+	-webkit-border-radius: 15px;
+    /*behavior: url(PIE.htc);*/
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+
+
+.cont .leftcol {
+    width: 252px;
+    float: left;
+    min-height: 330px;
+    background:  transparent url("images/col_left_sep.png") no-repeat scroll right top;
+}
+
+.cont .secnav {
+    
+}
+
+.cont .secnav a{
+    display: block;
+    margin-right: 27px;
+    text-decoration: none;
+    padding: 6px 5px 6px 5px;
+    border-bottom: 1px solid #e8e8e9;
+    color: #333333;
+    font:  14px "Trebuchet MS", Arial, Helvetica, sans-serif;
+}
+
+.cont .secnav li:hover {
+    padding-right: 27px;
+    background-color: #aad55f;
+    background:  transparent url('../images/secnav_libg.png') no-repeat scroll left top;
+}
+
+.cont .secnav li.selected {
+    background:  transparent url('../images/secnav_libg.png') no-repeat scroll left top;
+}
+
+.cont .secnav a:hover {
+    margin-right: 0;
+   /*border-bottom: 2px solid #e8e8e9;*/
+    /*padding-bottom: 6px;*/
+}
+
+.cont .desccol {
+    width: 665px;
+    float: left
+}
+
+.tour .tour_cont {
+    width: 554px;
+    height: 353px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 10px 0 0 10px;
+    margin-bottom: 20px;
+    background:  transparent url('../images/video_tour_bg.png') no-repeat scroll left top;
+}
+
+.tour .col {
+    width: 285px;
+    float: left;
+    padding: 0;
+    padding-top: 10px;
+    margin-right: 32px;
+}
+
+.tour .col h2 {
+    text-align: center;
+    line-height: 2em;
+    font:  24px "Trebuchet MS", Arial, Helvetica, sans-serif;
+}
+
+.tour .col p {
+    text-align: justify;
+}
+
+.tour .last {
+    margin-right: 0;
+}
+
+
+
+.features .scont_box{
+    width: 245px;
+    position: relative;
+    float: left;
+    padding-left: 80px;
+    margin-bottom: 25px;
+}
+
+
+.features .scont_box img {
+    /*float: left;
+    margin-right: 5px;*/
+    position: absolute;
+    left: 0;
+    
+}
+
+.features .scont_box p {
+    text-align: justify;
+}
+
+.features .scont_box a {
+    float: right;
+    font-weight: bold;
+    padding-right: 5px;
+    
+}
+
+.features .scont_box h5 {
+     font: bold 14px  Arial, Helvetica, sans-serif;
+}
+
+.features h2 {
+    font:  24px "Trebuchet MS", Arial, Helvetica, sans-serif;
+    padding-bottom: 20px;
+}
+
+.clear {
+    font-size:0;
+    line-height:0;
+    height:0;
+	 padding: 0 !important;
+	 margin: 0;
+    display:block;
+    clear:both;
+}

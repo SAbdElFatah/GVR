@@ -1,0 +1,2533 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="2.0" xmlns:edmx="http://schemas.microsoft.com/ado/2008/10/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="GVRModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+        <EntityContainer Name="GVRModelStoreContainer">
+          <EntitySet Name="Client" EntityType="GVRModel.Store.Client" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Currency" EntityType="GVRModel.Store.Currency" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="ElectricalAppliance" EntityType="GVRModel.Store.ElectricalAppliance" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="OverLookingView" EntityType="GVRModel.Store.OverLookingView" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Owner_Currency" EntityType="GVRModel.Store.Owner_Currency" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="OwnerRent" EntityType="GVRModel.Store.OwnerRent" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="sysdiagrams" EntityType="GVRModel.Store.sysdiagrams" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Tanent_OverLokkingView" EntityType="GVRModel.Store.Tanent_OverLokkingView" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="TanentApplication" EntityType="GVRModel.Store.TanentApplication" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="TanentRent" EntityType="GVRModel.Store.TanentRent" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Unit" EntityType="GVRModel.Store.Unit" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Unit_ElectricalAppliance" EntityType="GVRModel.Store.Unit_ElectricalAppliance" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Unit_OverLookingView" EntityType="GVRModel.Store.Unit_OverLookingView" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="UnitEditHistory" EntityType="GVRModel.Store.UnitEditHistory" store:Type="Tables" Schema="dbo" />
+          <AssociationSet Name="FK_ElectricalAppliance_Unit" Association="GVRModel.Store.FK_ElectricalAppliance_Unit">
+            <End Role="Unit" EntitySet="Unit" />
+            <End Role="Unit_ElectricalAppliance" EntitySet="Unit_ElectricalAppliance" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Owner_Currency_Currency" Association="GVRModel.Store.FK_Owner_Currency_Currency">
+            <End Role="Currency" EntitySet="Currency" />
+            <End Role="Owner_Currency" EntitySet="Owner_Currency" />
+          </AssociationSet>
+          <AssociationSet Name="FK_OwnerCurrencyTable_Unit" Association="GVRModel.Store.FK_OwnerCurrencyTable_Unit">
+            <End Role="Unit" EntitySet="Unit" />
+            <End Role="Owner_Currency" EntitySet="Owner_Currency" />
+          </AssociationSet>
+          <AssociationSet Name="FK_OwnerRent_Unit" Association="GVRModel.Store.FK_OwnerRent_Unit">
+            <End Role="Unit" EntitySet="Unit" />
+            <End Role="OwnerRent" EntitySet="OwnerRent" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Tanent_OverLokkingView_OverLookingView" Association="GVRModel.Store.FK_Tanent_OverLokkingView_OverLookingView">
+            <End Role="OverLookingView" EntitySet="OverLookingView" />
+            <End Role="Tanent_OverLokkingView" EntitySet="Tanent_OverLokkingView" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Tanent_OverLokkingView_TanentApplication" Association="GVRModel.Store.FK_Tanent_OverLokkingView_TanentApplication">
+            <End Role="TanentApplication" EntitySet="TanentApplication" />
+            <End Role="Tanent_OverLokkingView" EntitySet="Tanent_OverLokkingView" />
+          </AssociationSet>
+          <AssociationSet Name="FK_TanentApplication_Client" Association="GVRModel.Store.FK_TanentApplication_Client">
+            <End Role="Client" EntitySet="Client" />
+            <End Role="TanentApplication" EntitySet="TanentApplication" />
+          </AssociationSet>
+          <AssociationSet Name="FK_TanentRent_Client" Association="GVRModel.Store.FK_TanentRent_Client">
+            <End Role="Client" EntitySet="Client" />
+            <End Role="TanentRent" EntitySet="TanentRent" />
+          </AssociationSet>
+          <AssociationSet Name="FK_TanentRent_Unit" Association="GVRModel.Store.FK_TanentRent_Unit">
+            <End Role="Unit" EntitySet="Unit" />
+            <End Role="TanentRent" EntitySet="TanentRent" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Unit_Client" Association="GVRModel.Store.FK_Unit_Client">
+            <End Role="Client" EntitySet="Client" />
+            <End Role="Unit" EntitySet="Unit" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Unit_Edit_Unit" Association="GVRModel.Store.FK_Unit_Edit_Unit">
+            <End Role="Unit" EntitySet="Unit" />
+            <End Role="UnitEditHistory" EntitySet="UnitEditHistory" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Unit_ElectricalAppliance_ElectricalAppliance" Association="GVRModel.Store.FK_Unit_ElectricalAppliance_ElectricalAppliance">
+            <End Role="ElectricalAppliance" EntitySet="ElectricalAppliance" />
+            <End Role="Unit_ElectricalAppliance" EntitySet="Unit_ElectricalAppliance" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Unit_OverLookingView_OverLookingView" Association="GVRModel.Store.FK_Unit_OverLookingView_OverLookingView">
+            <End Role="OverLookingView" EntitySet="OverLookingView" />
+            <End Role="Unit_OverLookingView" EntitySet="Unit_OverLookingView" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Unit_OverLookingView_Unit" Association="GVRModel.Store.FK_Unit_OverLookingView_Unit">
+            <End Role="Unit" EntitySet="Unit" />
+            <End Role="Unit_OverLookingView" EntitySet="Unit_OverLookingView" />
+          </AssociationSet>
+        </EntityContainer>
+        <EntityType Name="Client">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="ClientName" Type="nvarchar" MaxLength="150" />
+          <Property Name="Occupation" Type="nvarchar" MaxLength="150" />
+          <Property Name="HomeAddress" Type="nvarchar" MaxLength="450" />
+          <Property Name="City" Type="nvarchar" MaxLength="50" />
+          <Property Name="Country" Type="nvarchar" MaxLength="50" />
+          <Property Name="Email" Type="nvarchar" MaxLength="100" />
+          <Property Name="Fax" Type="nvarchar" MaxLength="50" />
+          <Property Name="Type" Type="nvarchar" MaxLength="50" />
+          <Property Name="PostalCode" Type="nvarchar" MaxLength="50" />
+          <Property Name="Work_DayTime_Phone" Type="nvarchar" MaxLength="50" />
+          <Property Name="Home_Evening_Phone" Type="nvarchar" MaxLength="50" />
+          <Property Name="MobilePhone" Type="nvarchar" MaxLength="50" />
+          <Property Name="Active" Type="bit" />
+        </EntityType>
+        <EntityType Name="Currency">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Currency" Type="nvarchar" MaxLength="50" />
+          <Property Name="Active" Type="bit" />
+        </EntityType>
+        <EntityType Name="ElectricalAppliance">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="ElectricalApplianceName" Type="nvarchar" MaxLength="50" />
+          <Property Name="Active" Type="bit" />
+        </EntityType>
+        <EntityType Name="OverLookingView">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="OverLookingView" Type="nvarchar" MaxLength="50" />
+          <Property Name="Active" Type="bit" />
+        </EntityType>
+        <EntityType Name="Owner_Currency">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="UnitID" Type="int" />
+          <Property Name="CurrencyID" Type="int" />
+          <Property Name="Active" Type="bit" />
+        </EntityType>
+        <EntityType Name="OwnerRent">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="UnitID" Type="int" />
+          <Property Name="Rate" Type="int" />
+          <Property Name="RefNumber" Type="nvarchar" MaxLength="50" />
+          <Property Name="ItemDescription" Type="nvarchar" MaxLength="450" />
+          <Property Name="CR" Type="float" />
+          <Property Name="DB" Type="float" />
+          <Property Name="Balance" Type="float" />
+          <Property Name="FromDate" Type="datetime" />
+          <Property Name="ToDate" Type="datetime" />
+          <Property Name="Active" Type="bit" />
+        </EntityType>
+        <EntityType Name="sysdiagrams">
+          <Key>
+            <PropertyRef Name="diagram_id" />
+          </Key>
+          <Property Name="name" Type="nvarchar" Nullable="false" MaxLength="128" />
+          <Property Name="principal_id" Type="int" Nullable="false" />
+          <Property Name="diagram_id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="version" Type="int" />
+          <Property Name="definition" Type="varbinary(max)" />
+        </EntityType>
+        <EntityType Name="Tanent_OverLokkingView">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="AppID" Type="int" />
+          <Property Name="OverLookingViewId" Type="int" />
+          <Property Name="Active" Type="bit" />
+        </EntityType>
+        <EntityType Name="TanentApplication">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="UnitType" Type="nvarchar" MaxLength="50" />
+          <Property Name="NumberOfBedRoom" Type="int" />
+          <Property Name="LocationComment" Type="text" />
+          <Property Name="CheckInDate" Type="datetime" />
+          <Property Name="CheckOutDate" Type="datetime" />
+          <Property Name="PurposeOfRent" Type="nvarchar" MaxLength="50" />
+          <Property Name="PurposeOfRentComment" Type="text" />
+          <Property Name="AirportPickUp" Type="bit" />
+          <Property Name="AirportPickUpComment" Type="text" />
+          <Property Name="BudgetFrom" Type="float" />
+          <Property Name="BudgetTo" Type="float" />
+          <Property Name="BudgetComment" Type="text" />
+          <Property Name="TanentId" Type="int" />
+          <Property Name="Active" Type="bit" />
+        </EntityType>
+        <EntityType Name="TanentRent">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" Nullable="false" />
+          <Property Name="TanentID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="UnitID" Type="int" />
+          <Property Name="FromDate" Type="datetime" />
+          <Property Name="ToDate" Type="datetime" />
+          <Property Name="ApprovedStatus" Type="bit" />
+          <Property Name="Active" Type="bit" />
+        </EntityType>
+        <EntityType Name="Unit">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="OwnerID" Type="int" />
+          <Property Name="PropertyExtNumber" Type="nvarchar" MaxLength="50" />
+          <Property Name="Location" Type="nvarchar" MaxLength="450" />
+          <Property Name="NumberOfMasterRooms" Type="int" />
+          <Property Name="NumberOfBedRooms" Type="int" />
+          <Property Name="NumberOfBathRooms" Type="int" />
+          <Property Name="NumberOfMaidRooms" Type="int" />
+          <Property Name="Area" Type="int" />
+          <Property Name="Type" Type="nvarchar" MaxLength="50" />
+          <Property Name="Floor" Type="nvarchar" MaxLength="50" />
+          <Property Name="NumberOfTrrace" Type="int" />
+          <Property Name="NumberOfRoof" Type="int" />
+          <Property Name="NumberOfGarden" Type="int" />
+          <Property Name="NumberOfSwimmingPools" Type="int" />
+          <Property Name="NumberOfSingleBeds" Type="int" />
+          <Property Name="NumberOfDoubleBeds" Type="int" />
+          <Property Name="NumberOfSofaBeds" Type="int" />
+          <Property Name="HostingNumber" Type="int" />
+          <Property Name="RentingTerm" Type="int" />
+          <Property Name="RentingComment" Type="text" />
+          <Property Name="MinimumRatePerWeek" Type="float" />
+          <Property Name="MinimumRatePerMonth" Type="float" />
+          <Property Name="GVRDecidedRate" Type="float" />
+          <Property Name="PropertyFurnishingEquiment" Type="bit" />
+          <Property Name="FurnishingComments" Type="text" />
+          <Property Name="ElectricalApplianceComments" Type="text" />
+          <Property Name="OverLookingViewComments" Type="text" />
+          <Property Name="OveralCondition" Type="nvarchar" MaxLength="50" />
+          <Property Name="OveralCondationComment" Type="text" />
+          <Property Name="ApprovedStatus" Type="bit" />
+          <Property Name="Active" Type="bit" />
+        </EntityType>
+        <EntityType Name="Unit_ElectricalAppliance">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="UnitID" Type="int" />
+          <Property Name="ElectricalAplliancID" Type="int" />
+          <Property Name="Active" Type="bit" />
+        </EntityType>
+        <EntityType Name="Unit_OverLookingView">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="UnitID" Type="int" />
+          <Property Name="OverLookingViewID" Type="int" />
+          <Property Name="Active" Type="bit" />
+        </EntityType>
+        <EntityType Name="UnitEditHistory">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="UnitID" Type="int" />
+          <Property Name="PropertyExtNumber" Type="nvarchar" MaxLength="50" />
+          <Property Name="Location" Type="nvarchar" MaxLength="450" />
+          <Property Name="NumberOfMasterRooms" Type="int" />
+          <Property Name="NumberOfBedRooms" Type="int" />
+          <Property Name="NumberOfBathRooms" Type="int" />
+          <Property Name="NumberOfMaidRooms" Type="int" />
+          <Property Name="Area" Type="int" />
+          <Property Name="Type" Type="nvarchar" MaxLength="50" />
+          <Property Name="Floor" Type="nvarchar" MaxLength="50" />
+          <Property Name="NumberOfTrrace" Type="int" />
+          <Property Name="NumberOfRoof" Type="int" />
+          <Property Name="NumberOfGarden" Type="int" />
+          <Property Name="NumberOfSwimmingPools" Type="int" />
+          <Property Name="NumberOfSingleBeds" Type="int" />
+          <Property Name="NumberOfDoubleBeds" Type="int" />
+          <Property Name="NumberOfSofaBeds" Type="int" />
+          <Property Name="HostingNumber" Type="int" />
+          <Property Name="RentingTerm" Type="int" />
+          <Property Name="RentingComment" Type="text" />
+          <Property Name="MinimumRatePerWeek" Type="float" />
+          <Property Name="MinimumRatePerMonth" Type="float" />
+          <Property Name="GVRDecidedRate" Type="float" />
+          <Property Name="PropertyFurnishingEquiment" Type="bit" />
+          <Property Name="FurnishingComments" Type="text" />
+          <Property Name="ElectricalApplianceComments" Type="text" />
+          <Property Name="OverLookingViewComments" Type="text" />
+          <Property Name="OveralCondition" Type="nvarchar" MaxLength="50" />
+          <Property Name="OveralCondationComment" Type="text" />
+          <Property Name="EditDate" Type="datetime" />
+          <Property Name="ApprovedStatus" Type="bit" />
+          <Property Name="Active" Type="bit" />
+        </EntityType>
+        <Association Name="FK_ElectricalAppliance_Unit">
+          <End Role="Unit" Type="GVRModel.Store.Unit" Multiplicity="0..1" />
+          <End Role="Unit_ElectricalAppliance" Type="GVRModel.Store.Unit_ElectricalAppliance" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Unit">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="Unit_ElectricalAppliance">
+              <PropertyRef Name="UnitID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Owner_Currency_Currency">
+          <End Role="Currency" Type="GVRModel.Store.Currency" Multiplicity="0..1" />
+          <End Role="Owner_Currency" Type="GVRModel.Store.Owner_Currency" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Currency">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="Owner_Currency">
+              <PropertyRef Name="CurrencyID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_OwnerCurrencyTable_Unit">
+          <End Role="Unit" Type="GVRModel.Store.Unit" Multiplicity="0..1" />
+          <End Role="Owner_Currency" Type="GVRModel.Store.Owner_Currency" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Unit">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="Owner_Currency">
+              <PropertyRef Name="UnitID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_OwnerRent_Unit">
+          <End Role="Unit" Type="GVRModel.Store.Unit" Multiplicity="0..1" />
+          <End Role="OwnerRent" Type="GVRModel.Store.OwnerRent" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Unit">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="OwnerRent">
+              <PropertyRef Name="UnitID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Tanent_OverLokkingView_OverLookingView">
+          <End Role="OverLookingView" Type="GVRModel.Store.OverLookingView" Multiplicity="0..1" />
+          <End Role="Tanent_OverLokkingView" Type="GVRModel.Store.Tanent_OverLokkingView" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="OverLookingView">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="Tanent_OverLokkingView">
+              <PropertyRef Name="OverLookingViewId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Tanent_OverLokkingView_TanentApplication">
+          <End Role="TanentApplication" Type="GVRModel.Store.TanentApplication" Multiplicity="0..1" />
+          <End Role="Tanent_OverLokkingView" Type="GVRModel.Store.Tanent_OverLokkingView" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TanentApplication">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="Tanent_OverLokkingView">
+              <PropertyRef Name="AppID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_TanentApplication_Client">
+          <End Role="Client" Type="GVRModel.Store.Client" Multiplicity="0..1" />
+          <End Role="TanentApplication" Type="GVRModel.Store.TanentApplication" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Client">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="TanentApplication">
+              <PropertyRef Name="TanentId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_TanentRent_Client">
+          <End Role="Client" Type="GVRModel.Store.Client" Multiplicity="1" />
+          <End Role="TanentRent" Type="GVRModel.Store.TanentRent" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Client">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="TanentRent">
+              <PropertyRef Name="TanentID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_TanentRent_Unit">
+          <End Role="Unit" Type="GVRModel.Store.Unit" Multiplicity="0..1" />
+          <End Role="TanentRent" Type="GVRModel.Store.TanentRent" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Unit">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="TanentRent">
+              <PropertyRef Name="UnitID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Unit_Client">
+          <End Role="Client" Type="GVRModel.Store.Client" Multiplicity="0..1" />
+          <End Role="Unit" Type="GVRModel.Store.Unit" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Client">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="Unit">
+              <PropertyRef Name="OwnerID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Unit_Edit_Unit">
+          <End Role="Unit" Type="GVRModel.Store.Unit" Multiplicity="0..1" />
+          <End Role="UnitEditHistory" Type="GVRModel.Store.UnitEditHistory" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Unit">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="UnitEditHistory">
+              <PropertyRef Name="UnitID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Unit_ElectricalAppliance_ElectricalAppliance">
+          <End Role="ElectricalAppliance" Type="GVRModel.Store.ElectricalAppliance" Multiplicity="0..1" />
+          <End Role="Unit_ElectricalAppliance" Type="GVRModel.Store.Unit_ElectricalAppliance" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ElectricalAppliance">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="Unit_ElectricalAppliance">
+              <PropertyRef Name="ElectricalAplliancID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Unit_OverLookingView_OverLookingView">
+          <End Role="OverLookingView" Type="GVRModel.Store.OverLookingView" Multiplicity="0..1" />
+          <End Role="Unit_OverLookingView" Type="GVRModel.Store.Unit_OverLookingView" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="OverLookingView">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="Unit_OverLookingView">
+              <PropertyRef Name="OverLookingViewID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Unit_OverLookingView_Unit">
+          <End Role="Unit" Type="GVRModel.Store.Unit" Multiplicity="0..1" />
+          <End Role="Unit_OverLookingView" Type="GVRModel.Store.Unit_OverLookingView" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Unit">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="Unit_OverLookingView">
+              <PropertyRef Name="UnitID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Function Name="fn_diagramobjects" ReturnType="int" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+        <Function Name="sp_alterdiagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+          <Parameter Name="owner_id" Type="int" Mode="In" />
+          <Parameter Name="version" Type="int" Mode="In" />
+          <Parameter Name="definition" Type="varbinary(max)" Mode="In" />
+        </Function>
+        <Function Name="sp_creatediagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+          <Parameter Name="owner_id" Type="int" Mode="In" />
+          <Parameter Name="version" Type="int" Mode="In" />
+          <Parameter Name="definition" Type="varbinary(max)" Mode="In" />
+        </Function>
+        <Function Name="sp_dropdiagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+          <Parameter Name="owner_id" Type="int" Mode="In" />
+        </Function>
+        <Function Name="sp_helpdiagramdefinition" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+          <Parameter Name="owner_id" Type="int" Mode="In" />
+        </Function>
+        <Function Name="sp_helpdiagrams" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+          <Parameter Name="owner_id" Type="int" Mode="In" />
+        </Function>
+        <Function Name="sp_renamediagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+          <Parameter Name="owner_id" Type="int" Mode="In" />
+          <Parameter Name="new_diagramname" Type="nvarchar" Mode="In" />
+        </Function>
+        <Function Name="sp_upgraddiagrams" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+        <Function Name="USP_Client_Add" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="ClientName" Type="nvarchar" Mode="In" />
+          <Parameter Name="Occupation" Type="nvarchar" Mode="In" />
+          <Parameter Name="HomeAddress" Type="nvarchar" Mode="In" />
+          <Parameter Name="City" Type="nvarchar" Mode="In" />
+          <Parameter Name="Country" Type="nvarchar" Mode="In" />
+          <Parameter Name="Email" Type="nvarchar" Mode="In" />
+          <Parameter Name="Fax" Type="nvarchar" Mode="In" />
+          <Parameter Name="Typ" Type="nvarchar" Mode="In" />
+          <Parameter Name="PostalCode" Type="nvarchar" Mode="In" />
+          <Parameter Name="Work_DayTime_Phone" Type="nvarchar" Mode="In" />
+          <Parameter Name="Home_Evening_Phone" Type="nvarchar" Mode="In" />
+          <Parameter Name="MobilePhone" Type="nvarchar" Mode="In" />
+        </Function>
+        <Function Name="USP_Client_Delete" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="ClientId" Type="int" Mode="In" />
+        </Function>
+        <Function Name="USP_Client_DeleteById" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="ClientId" Type="int" Mode="In" />
+        </Function>
+        <Function Name="USP_Client_GetById" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="ClientId" Type="int" Mode="In" />
+        </Function>
+        <Function Name="USP_Client_UpdateById" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="ClientId" Type="int" Mode="In" />
+          <Parameter Name="ClientName" Type="nvarchar" Mode="In" />
+          <Parameter Name="Occupation" Type="nvarchar" Mode="In" />
+          <Parameter Name="HomeAddress" Type="nvarchar" Mode="In" />
+          <Parameter Name="City" Type="nvarchar" Mode="In" />
+          <Parameter Name="Country" Type="nvarchar" Mode="In" />
+          <Parameter Name="Email" Type="nvarchar" Mode="In" />
+          <Parameter Name="Fax" Type="nvarchar" Mode="In" />
+          <Parameter Name="Typ" Type="nvarchar" Mode="In" />
+          <Parameter Name="PostalCode" Type="nvarchar" Mode="In" />
+          <Parameter Name="Work_DayTime_Phone" Type="nvarchar" Mode="In" />
+          <Parameter Name="Home_Evening_Phone" Type="nvarchar" Mode="In" />
+          <Parameter Name="MobilePhone" Type="nvarchar" Mode="In" />
+        </Function>
+        <Function Name="USP_Currency_Add" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="Currency" Type="nvarchar" Mode="In" />
+        </Function>
+        <Function Name="USP_Currency_Delete" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="CurrencyId" Type="int" Mode="In" />
+        </Function>
+        <Function Name="USP_currency_GetById" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="CurrencyId" Type="int" Mode="In" />
+        </Function>
+        <Function Name="USP_Currency_UpdateById" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="CurrencyId" Type="int" Mode="In" />
+          <Parameter Name="Currency" Type="nvarchar" Mode="In" />
+        </Function>
+        <Function Name="USP_ElectricalAppliance_Add" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="ElectricalApplianceName" Type="nvarchar" Mode="In" />
+        </Function>
+        <Function Name="USP_ElectricalAppliance_Delete" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="ElectricalApplianceId" Type="int" Mode="In" />
+        </Function>
+        <Function Name="USP_ElectricalAppliance_GetAll" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+        <Function Name="USP_ElectricalAppliance_GetById" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="ElectricalApplianceId" Type="int" Mode="In" />
+        </Function>
+        <Function Name="USP_ElectricalAppliance_UpdateById" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="ElectricalApplianceId" Type="int" Mode="In" />
+          <Parameter Name="ElectricalApplianceName" Type="nvarchar" Mode="In" />
+        </Function>
+        <Function Name="USP_OverLookingView_Add" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="OverLookingView" Type="nvarchar" Mode="In" />
+        </Function>
+        <Function Name="USP_OverLookingView_Delete" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="OverLookingViewId" Type="int" Mode="In" />
+        </Function>
+        <Function Name="USP_OverLookingView_GetAll" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+        <Function Name="USP_OverLookingView_GetById" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="OverLookingViewId" Type="int" Mode="In" />
+        </Function>
+        <Function Name="USP_OverLookingView_UpdateById" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="OverLookingViewId" Type="int" Mode="In" />
+          <Parameter Name="OverLookingView" Type="nvarchar" Mode="In" />
+        </Function>
+        <Function Name="USP_Owner_Currency_Add" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="UnitID" Type="int" Mode="In" />
+          <Parameter Name="CurrencyID" Type="int" Mode="In" />
+        </Function>
+        <Function Name="USP_Owner_Currency_Delete" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="Id" Type="int" Mode="In" />
+        </Function>
+        <Function Name="USP_Owner_Currency_UpdateById" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="Id" Type="int" Mode="In" />
+          <Parameter Name="UnitID" Type="int" Mode="In" />
+          <Parameter Name="CurrencyID" Type="int" Mode="In" />
+        </Function>
+        <Function Name="USP_OwnerRent_Add" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="UnitID" Type="int" Mode="In" />
+          <Parameter Name="Rate" Type="int" Mode="In" />
+          <Parameter Name="RefNumber" Type="nvarchar" Mode="In" />
+          <Parameter Name="ItemDescription" Type="nvarchar" Mode="In" />
+          <Parameter Name="CR" Type="float" Mode="In" />
+          <Parameter Name="DB" Type="float" Mode="In" />
+          <Parameter Name="Balance" Type="float" Mode="In" />
+          <Parameter Name="FromDate" Type="datetime" Mode="In" />
+          <Parameter Name="ToDate" Type="datetime" Mode="In" />
+        </Function>
+        <Function Name="USP_OwnerRent_Delete" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="Id" Type="int" Mode="In" />
+        </Function>
+        <Function Name="USP_OwnerRent_UpdateById" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="Id" Type="int" Mode="In" />
+          <Parameter Name="UnitID" Type="int" Mode="In" />
+          <Parameter Name="Rate" Type="int" Mode="In" />
+          <Parameter Name="RefNumber" Type="nvarchar" Mode="In" />
+          <Parameter Name="ItemDescription" Type="nvarchar" Mode="In" />
+          <Parameter Name="CR" Type="float" Mode="In" />
+          <Parameter Name="DB" Type="float" Mode="In" />
+          <Parameter Name="Balance" Type="float" Mode="In" />
+          <Parameter Name="FromDate" Type="datetime" Mode="In" />
+          <Parameter Name="ToDate" Type="datetime" Mode="In" />
+        </Function>
+        <Function Name="USP_TanentApplication_Add" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="UnitType" Type="nvarchar" Mode="In" />
+          <Parameter Name="NumberOfBedRoom" Type="int" Mode="In" />
+          <Parameter Name="LocationComment" Type="text" Mode="In" />
+          <Parameter Name="CheckInDate" Type="datetime" Mode="In" />
+          <Parameter Name="CheckOutDate" Type="datetime" Mode="In" />
+          <Parameter Name="PurposeOfRent" Type="nvarchar" Mode="In" />
+          <Parameter Name="PurposeOfRentComment" Type="text" Mode="In" />
+          <Parameter Name="AirportPickUp" Type="bit" Mode="In" />
+          <Parameter Name="AirportPickUpComment" Type="text" Mode="In" />
+          <Parameter Name="BudgetFrom" Type="float" Mode="In" />
+          <Parameter Name="BudgetTo" Type="float" Mode="In" />
+          <Parameter Name="BudgetComment" Type="text" Mode="In" />
+          <Parameter Name="TanentId" Type="int" Mode="In" />
+        </Function>
+        <Function Name="USP_TanentApplication_Delete" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="TanentAppId" Type="int" Mode="In" />
+        </Function>
+        <Function Name="USP_TanentApplication_GetById" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="TanentApplicationId" Type="int" Mode="In" />
+        </Function>
+        <Function Name="USP_TanentApplication_GetByTanentId" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="TanentId" Type="int" Mode="In" />
+        </Function>
+        <Function Name="USP_TanentApplication_UpdateById" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="TanentAppId" Type="int" Mode="In" />
+          <Parameter Name="UnitType" Type="nvarchar" Mode="In" />
+          <Parameter Name="NumberOfBedRoom" Type="int" Mode="In" />
+          <Parameter Name="LocationComment" Type="text" Mode="In" />
+          <Parameter Name="CheckInDate" Type="datetime" Mode="In" />
+          <Parameter Name="CheckOutDate" Type="datetime" Mode="In" />
+          <Parameter Name="PurposeOfRent" Type="nvarchar" Mode="In" />
+          <Parameter Name="PurposeOfRentComment" Type="text" Mode="In" />
+          <Parameter Name="AirportPickUp" Type="bit" Mode="In" />
+          <Parameter Name="AirportPickUpComment" Type="text" Mode="In" />
+          <Parameter Name="BudgetFrom" Type="float" Mode="In" />
+          <Parameter Name="BudgetTo" Type="float" Mode="In" />
+          <Parameter Name="BudgetComment" Type="text" Mode="In" />
+          <Parameter Name="TanentId" Type="int" Mode="In" />
+        </Function>
+        <Function Name="USP_TanentRent_Add" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="UnitID" Type="int" Mode="In" />
+          <Parameter Name="FromDate" Type="datetime" Mode="In" />
+          <Parameter Name="ToDate" Type="datetime" Mode="In" />
+          <Parameter Name="ApprovedStatus" Type="bit" Mode="In" />
+        </Function>
+        <Function Name="USP_TanentRent_Delete" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="Id" Type="int" Mode="In" />
+        </Function>
+        <Function Name="USP_TanentRent_UpdateById" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="Id" Type="int" Mode="In" />
+          <Parameter Name="UnitID" Type="int" Mode="In" />
+          <Parameter Name="FromDate" Type="datetime" Mode="In" />
+          <Parameter Name="ToDate" Type="datetime" Mode="In" />
+          <Parameter Name="ApprovedStatus" Type="bit" Mode="In" />
+        </Function>
+        <Function Name="USP_Unit_Add" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="OwnerID" Type="int" Mode="In" />
+          <Parameter Name="PropertyExtNumber" Type="nvarchar" Mode="In" />
+          <Parameter Name="Location" Type="nvarchar" Mode="In" />
+          <Parameter Name="NumberOfMasterRooms" Type="int" Mode="In" />
+          <Parameter Name="NumberOfBedRooms" Type="int" Mode="In" />
+          <Parameter Name="NumberOfBathRooms" Type="int" Mode="In" />
+          <Parameter Name="NumberOfMaidRooms" Type="int" Mode="In" />
+          <Parameter Name="Area" Type="int" Mode="In" />
+          <Parameter Name="Type" Type="nvarchar" Mode="In" />
+          <Parameter Name="Flr" Type="nvarchar" Mode="In" />
+          <Parameter Name="NumberOfTrrace" Type="int" Mode="In" />
+          <Parameter Name="NumberOfRoof" Type="int" Mode="In" />
+          <Parameter Name="NumberOfGarden" Type="int" Mode="In" />
+          <Parameter Name="NumberOfSwimmingPools" Type="int" Mode="In" />
+          <Parameter Name="NumberOfSingleBeds" Type="int" Mode="In" />
+          <Parameter Name="NumberOfDoubleBeds" Type="int" Mode="In" />
+          <Parameter Name="NumberOfSofaBeds" Type="int" Mode="In" />
+          <Parameter Name="HostingNumber" Type="int" Mode="In" />
+          <Parameter Name="RentingTerm" Type="int" Mode="In" />
+          <Parameter Name="RentingComment" Type="text" Mode="In" />
+          <Parameter Name="MinimumRatePerWeek" Type="float" Mode="In" />
+          <Parameter Name="MinimumRatePerMonth" Type="float" Mode="In" />
+          <Parameter Name="GVRDecidedRate" Type="float" Mode="In" />
+          <Parameter Name="PropertyFurnishingEquiment" Type="bit" Mode="In" />
+          <Parameter Name="FurnishingComments" Type="text" Mode="In" />
+          <Parameter Name="ElectricalApplianceComments" Type="text" Mode="In" />
+          <Parameter Name="OverLookingViewComments" Type="text" Mode="In" />
+          <Parameter Name="OveralCondition" Type="nvarchar" Mode="In" />
+          <Parameter Name="OveralCondationComment" Type="text" Mode="In" />
+          <Parameter Name="ApprovedStatus" Type="bit" Mode="In" />
+        </Function>
+        <Function Name="USP_Unit_ElectricalAppliance_Add" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="UnitID" Type="int" Mode="In" />
+          <Parameter Name="ElectricalAplliancID" Type="int" Mode="In" />
+        </Function>
+        <Function Name="USP_Unit_ElectricalAppliance_Delete" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="Id" Type="int" Mode="In" />
+        </Function>
+        <Function Name="USP_Unit_ElectricalAppliance_UpdateById" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="Id" Type="int" Mode="In" />
+          <Parameter Name="UnitID" Type="int" Mode="In" />
+          <Parameter Name="ElectricalAplliancID" Type="int" Mode="In" />
+        </Function>
+        <Function Name="USP_Unit_GetById" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="UnitId" Type="int" Mode="In" />
+        </Function>
+        <Function Name="USP_Unit_GetByOwnerId" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="OwnerId" Type="int" Mode="In" />
+        </Function>
+        <Function Name="USP_Unit_OverLookingView_Add" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="UnitID" Type="int" Mode="In" />
+          <Parameter Name="OverLookingViewID" Type="int" Mode="In" />
+        </Function>
+        <Function Name="USP_Unit_OverLookingView_Delete" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="Id" Type="int" Mode="In" />
+        </Function>
+        <Function Name="USP_Unit_OverLookingView_UpdateById" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="Id" Type="int" Mode="In" />
+          <Parameter Name="UnitID" Type="int" Mode="In" />
+          <Parameter Name="OverLookingViewID" Type="int" Mode="In" />
+        </Function>
+        <Function Name="USP_Unit_Search" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="OwnerID" Type="int" Mode="In" />
+          <Parameter Name="Location" Type="nvarchar" Mode="In" />
+          <Parameter Name="NumberOfMasterRooms" Type="int" Mode="In" />
+          <Parameter Name="NumberOfBedRooms" Type="int" Mode="In" />
+          <Parameter Name="NumberOfBathRooms" Type="int" Mode="In" />
+          <Parameter Name="NumberOfMaidRooms" Type="int" Mode="In" />
+          <Parameter Name="Area" Type="int" Mode="In" />
+          <Parameter Name="Type" Type="nvarchar" Mode="In" />
+          <Parameter Name="Flr" Type="nvarchar" Mode="In" />
+          <Parameter Name="NumberOfTrrace" Type="int" Mode="In" />
+          <Parameter Name="NumberOfRoof" Type="int" Mode="In" />
+          <Parameter Name="NumberOfGarden" Type="int" Mode="In" />
+          <Parameter Name="NumberOfSwimmingPools" Type="int" Mode="In" />
+          <Parameter Name="NumberOfSingleBeds" Type="int" Mode="In" />
+          <Parameter Name="NumberOfDoubleBeds" Type="int" Mode="In" />
+          <Parameter Name="NumberOfSofaBeds" Type="int" Mode="In" />
+          <Parameter Name="HostingNumber" Type="int" Mode="In" />
+          <Parameter Name="RentingTerm" Type="int" Mode="In" />
+          <Parameter Name="RatePerWeek" Type="float" Mode="In" />
+          <Parameter Name="RatePerMonth" Type="float" Mode="In" />
+          <Parameter Name="OveralCondition" Type="nvarchar" Mode="In" />
+          <Parameter Name="FromDate" Type="datetime" Mode="In" />
+          <Parameter Name="ToDate" Type="datetime" Mode="In" />
+        </Function>
+        <Function Name="USP_Unit_UpdateById" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="UnitId" Type="int" Mode="In" />
+          <Parameter Name="OwnerID" Type="int" Mode="In" />
+          <Parameter Name="PropertyExtNumber" Type="nvarchar" Mode="In" />
+          <Parameter Name="Location" Type="nvarchar" Mode="In" />
+          <Parameter Name="NumberOfMasterRooms" Type="int" Mode="In" />
+          <Parameter Name="NumberOfBedRooms" Type="int" Mode="In" />
+          <Parameter Name="NumberOfBathRooms" Type="int" Mode="In" />
+          <Parameter Name="NumberOfMaidRooms" Type="int" Mode="In" />
+          <Parameter Name="Area" Type="int" Mode="In" />
+          <Parameter Name="Type" Type="nvarchar" Mode="In" />
+          <Parameter Name="Flr" Type="nvarchar" Mode="In" />
+          <Parameter Name="NumberOfTrrace" Type="int" Mode="In" />
+          <Parameter Name="NumberOfRoof" Type="int" Mode="In" />
+          <Parameter Name="NumberOfGarden" Type="int" Mode="In" />
+          <Parameter Name="NumberOfSwimmingPools" Type="int" Mode="In" />
+          <Parameter Name="NumberOfSingleBeds" Type="int" Mode="In" />
+          <Parameter Name="NumberOfDoubleBeds" Type="int" Mode="In" />
+          <Parameter Name="NumberOfSofaBeds" Type="int" Mode="In" />
+          <Parameter Name="HostingNumber" Type="int" Mode="In" />
+          <Parameter Name="RentingTerm" Type="int" Mode="In" />
+          <Parameter Name="RentingComment" Type="text" Mode="In" />
+          <Parameter Name="MinimumRatePerWeek" Type="float" Mode="In" />
+          <Parameter Name="MinimumRatePerMonth" Type="float" Mode="In" />
+          <Parameter Name="GVRDecidedRate" Type="float" Mode="In" />
+          <Parameter Name="PropertyFurnishingEquiment" Type="bit" Mode="In" />
+          <Parameter Name="FurnishingComments" Type="text" Mode="In" />
+          <Parameter Name="ElectricalApplianceComments" Type="text" Mode="In" />
+          <Parameter Name="OverLookingViewComments" Type="text" Mode="In" />
+          <Parameter Name="OveralCondition" Type="nvarchar" Mode="In" />
+          <Parameter Name="OveralCondationComment" Type="text" Mode="In" />
+          <Parameter Name="ApprovedStatus" Type="bit" Mode="In" />
+        </Function>
+        <Function Name="USP_UnitEditHistory_Add" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="UnitID" Type="int" Mode="In" />
+          <Parameter Name="PropertyExtNumber" Type="nvarchar" Mode="In" />
+          <Parameter Name="Location" Type="nvarchar" Mode="In" />
+          <Parameter Name="NumberOfMasterRooms" Type="int" Mode="In" />
+          <Parameter Name="NumberOfBedRooms" Type="int" Mode="In" />
+          <Parameter Name="NumberOfBathRooms" Type="int" Mode="In" />
+          <Parameter Name="NumberOfMaidRooms" Type="int" Mode="In" />
+          <Parameter Name="Area" Type="int" Mode="In" />
+          <Parameter Name="Type" Type="nvarchar" Mode="In" />
+          <Parameter Name="Flr" Type="nvarchar" Mode="In" />
+          <Parameter Name="NumberOfTrrace" Type="int" Mode="In" />
+          <Parameter Name="NumberOfRoof" Type="int" Mode="In" />
+          <Parameter Name="NumberOfGarden" Type="int" Mode="In" />
+          <Parameter Name="NumberOfSwimmingPools" Type="int" Mode="In" />
+          <Parameter Name="NumberOfSingleBeds" Type="int" Mode="In" />
+          <Parameter Name="NumberOfDoubleBeds" Type="int" Mode="In" />
+          <Parameter Name="NumberOfSofaBeds" Type="int" Mode="In" />
+          <Parameter Name="HostingNumber" Type="int" Mode="In" />
+          <Parameter Name="RentingTerm" Type="int" Mode="In" />
+          <Parameter Name="RentingComment" Type="text" Mode="In" />
+          <Parameter Name="MinimumRatePerWeek" Type="float" Mode="In" />
+          <Parameter Name="MinimumRatePerMonth" Type="float" Mode="In" />
+          <Parameter Name="GVRDecidedRate" Type="float" Mode="In" />
+          <Parameter Name="PropertyFurnishingEquiment" Type="bit" Mode="In" />
+          <Parameter Name="FurnishingComments" Type="text" Mode="In" />
+          <Parameter Name="ElectricalApplianceComments" Type="text" Mode="In" />
+          <Parameter Name="OverLookingViewComments" Type="text" Mode="In" />
+          <Parameter Name="OveralCondition" Type="nvarchar" Mode="In" />
+          <Parameter Name="OveralCondationComment" Type="text" Mode="In" />
+          <Parameter Name="ApprovedStatus" Type="bit" Mode="In" />
+          <Parameter Name="EditDate" Type="datetime" Mode="In" />
+        </Function>
+        <Function Name="USP_UnitEditHistory_Delete" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="RecoredId" Type="int" Mode="In" />
+        </Function>
+        <Function Name="USP_UnitEditHistory_GetById" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="Id" Type="int" Mode="In" />
+        </Function>
+        <Function Name="USP_UnitEditHistory_UpdateById" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="RecoredId" Type="int" Mode="In" />
+          <Parameter Name="PropertyExtNumber" Type="nvarchar" Mode="In" />
+          <Parameter Name="Location" Type="nvarchar" Mode="In" />
+          <Parameter Name="NumberOfMasterRooms" Type="int" Mode="In" />
+          <Parameter Name="NumberOfBedRooms" Type="int" Mode="In" />
+          <Parameter Name="NumberOfBathRooms" Type="int" Mode="In" />
+          <Parameter Name="NumberOfMaidRooms" Type="int" Mode="In" />
+          <Parameter Name="Area" Type="int" Mode="In" />
+          <Parameter Name="Type" Type="nvarchar" Mode="In" />
+          <Parameter Name="Flr" Type="nvarchar" Mode="In" />
+          <Parameter Name="NumberOfTrrace" Type="int" Mode="In" />
+          <Parameter Name="NumberOfRoof" Type="int" Mode="In" />
+          <Parameter Name="NumberOfGarden" Type="int" Mode="In" />
+          <Parameter Name="NumberOfSwimmingPools" Type="int" Mode="In" />
+          <Parameter Name="NumberOfSingleBeds" Type="int" Mode="In" />
+          <Parameter Name="NumberOfDoubleBeds" Type="int" Mode="In" />
+          <Parameter Name="NumberOfSofaBeds" Type="int" Mode="In" />
+          <Parameter Name="HostingNumber" Type="int" Mode="In" />
+          <Parameter Name="RentingTerm" Type="int" Mode="In" />
+          <Parameter Name="RentingComment" Type="text" Mode="In" />
+          <Parameter Name="MinimumRatePerWeek" Type="float" Mode="In" />
+          <Parameter Name="MinimumRatePerMonth" Type="float" Mode="In" />
+          <Parameter Name="GVRDecidedRate" Type="float" Mode="In" />
+          <Parameter Name="PropertyFurnishingEquiment" Type="bit" Mode="In" />
+          <Parameter Name="FurnishingComments" Type="text" Mode="In" />
+          <Parameter Name="ElectricalApplianceComments" Type="text" Mode="In" />
+          <Parameter Name="OverLookingViewComments" Type="text" Mode="In" />
+          <Parameter Name="OveralCondition" Type="nvarchar" Mode="In" />
+          <Parameter Name="OveralCondationComment" Type="text" Mode="In" />
+          <Parameter Name="EditDate" Type="datetime" Mode="In" />
+          <Parameter Name="ApprovedStatus" Type="bit" Mode="In" />
+        </Function>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="GVRModel" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+        <EntityContainer Name="GVREntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="Client" EntityType="GVRModel.Client" />
+          <EntitySet Name="Currency" EntityType="GVRModel.Currency" />
+          <EntitySet Name="ElectricalAppliance" EntityType="GVRModel.ElectricalAppliance" />
+          <EntitySet Name="OverLookingView" EntityType="GVRModel.OverLookingView" />
+          <EntitySet Name="Owner_Currency" EntityType="GVRModel.Owner_Currency" />
+          <EntitySet Name="OwnerRent" EntityType="GVRModel.OwnerRent" />
+          <EntitySet Name="sysdiagrams" EntityType="GVRModel.sysdiagrams" />
+          <EntitySet Name="Tanent_OverLokkingView" EntityType="GVRModel.Tanent_OverLokkingView" />
+          <EntitySet Name="TanentApplication" EntityType="GVRModel.TanentApplication" />
+          <EntitySet Name="TanentRent" EntityType="GVRModel.TanentRent" />
+          <EntitySet Name="Unit" EntityType="GVRModel.Unit" />
+          <EntitySet Name="Unit_ElectricalAppliance" EntityType="GVRModel.Unit_ElectricalAppliance" />
+          <EntitySet Name="Unit_OverLookingView" EntityType="GVRModel.Unit_OverLookingView" />
+          <EntitySet Name="UnitEditHistory" EntityType="GVRModel.UnitEditHistory" />
+          <AssociationSet Name="FK_TanentApplication_Client" Association="GVRModel.FK_TanentApplication_Client">
+            <End Role="Client" EntitySet="Client" />
+            <End Role="TanentApplication" EntitySet="TanentApplication" />
+          </AssociationSet>
+          <AssociationSet Name="FK_TanentRent_Client" Association="GVRModel.FK_TanentRent_Client">
+            <End Role="Client" EntitySet="Client" />
+            <End Role="TanentRent" EntitySet="TanentRent" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Unit_Client" Association="GVRModel.FK_Unit_Client">
+            <End Role="Client" EntitySet="Client" />
+            <End Role="Unit" EntitySet="Unit" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Owner_Currency_Currency" Association="GVRModel.FK_Owner_Currency_Currency">
+            <End Role="Currency" EntitySet="Currency" />
+            <End Role="Owner_Currency" EntitySet="Owner_Currency" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Unit_ElectricalAppliance_ElectricalAppliance" Association="GVRModel.FK_Unit_ElectricalAppliance_ElectricalAppliance">
+            <End Role="ElectricalAppliance" EntitySet="ElectricalAppliance" />
+            <End Role="Unit_ElectricalAppliance" EntitySet="Unit_ElectricalAppliance" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Tanent_OverLokkingView_OverLookingView" Association="GVRModel.FK_Tanent_OverLokkingView_OverLookingView">
+            <End Role="OverLookingView" EntitySet="OverLookingView" />
+            <End Role="Tanent_OverLokkingView" EntitySet="Tanent_OverLokkingView" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Unit_OverLookingView_OverLookingView" Association="GVRModel.FK_Unit_OverLookingView_OverLookingView">
+            <End Role="OverLookingView" EntitySet="OverLookingView" />
+            <End Role="Unit_OverLookingView" EntitySet="Unit_OverLookingView" />
+          </AssociationSet>
+          <AssociationSet Name="FK_OwnerCurrencyTable_Unit" Association="GVRModel.FK_OwnerCurrencyTable_Unit">
+            <End Role="Unit" EntitySet="Unit" />
+            <End Role="Owner_Currency" EntitySet="Owner_Currency" />
+          </AssociationSet>
+          <AssociationSet Name="FK_OwnerRent_Unit" Association="GVRModel.FK_OwnerRent_Unit">
+            <End Role="Unit" EntitySet="Unit" />
+            <End Role="OwnerRent" EntitySet="OwnerRent" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Tanent_OverLokkingView_TanentApplication" Association="GVRModel.FK_Tanent_OverLokkingView_TanentApplication">
+            <End Role="TanentApplication" EntitySet="TanentApplication" />
+            <End Role="Tanent_OverLokkingView" EntitySet="Tanent_OverLokkingView" />
+          </AssociationSet>
+          <AssociationSet Name="FK_TanentRent_Unit" Association="GVRModel.FK_TanentRent_Unit">
+            <End Role="Unit" EntitySet="Unit" />
+            <End Role="TanentRent" EntitySet="TanentRent" />
+          </AssociationSet>
+          <AssociationSet Name="FK_ElectricalAppliance_Unit" Association="GVRModel.FK_ElectricalAppliance_Unit">
+            <End Role="Unit" EntitySet="Unit" />
+            <End Role="Unit_ElectricalAppliance" EntitySet="Unit_ElectricalAppliance" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Unit_Edit_Unit" Association="GVRModel.FK_Unit_Edit_Unit">
+            <End Role="Unit" EntitySet="Unit" />
+            <End Role="UnitEditHistory" EntitySet="UnitEditHistory" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Unit_OverLookingView_Unit" Association="GVRModel.FK_Unit_OverLookingView_Unit">
+            <End Role="Unit" EntitySet="Unit" />
+            <End Role="Unit_OverLookingView" EntitySet="Unit_OverLookingView" />
+          </AssociationSet>
+          <FunctionImport Name="sp_alterdiagram">
+            <Parameter Name="diagramname" Mode="In" Type="String" />
+            <Parameter Name="owner_id" Mode="In" Type="Int32" />
+            <Parameter Name="version" Mode="In" Type="Int32" />
+            <Parameter Name="definition" Mode="In" Type="Binary" />
+          </FunctionImport>
+          <FunctionImport Name="sp_creatediagram">
+            <Parameter Name="diagramname" Mode="In" Type="String" />
+            <Parameter Name="owner_id" Mode="In" Type="Int32" />
+            <Parameter Name="version" Mode="In" Type="Int32" />
+            <Parameter Name="definition" Mode="In" Type="Binary" />
+          </FunctionImport>
+          <FunctionImport Name="sp_dropdiagram">
+            <Parameter Name="diagramname" Mode="In" Type="String" />
+            <Parameter Name="owner_id" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="sp_helpdiagramdefinition" ReturnType="Collection(GVRModel.sp_helpdiagramdefinition_Result)">
+            <Parameter Name="diagramname" Mode="In" Type="String" />
+            <Parameter Name="owner_id" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="sp_helpdiagrams" ReturnType="Collection(GVRModel.sp_helpdiagrams_Result)">
+            <Parameter Name="diagramname" Mode="In" Type="String" />
+            <Parameter Name="owner_id" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="sp_renamediagram">
+            <Parameter Name="diagramname" Mode="In" Type="String" />
+            <Parameter Name="owner_id" Mode="In" Type="Int32" />
+            <Parameter Name="new_diagramname" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="sp_upgraddiagrams" />
+          <FunctionImport Name="USP_Client_Add" ReturnType="Collection(Int32)">
+            <Parameter Name="ClientName" Mode="In" Type="String" />
+            <Parameter Name="Occupation" Mode="In" Type="String" />
+            <Parameter Name="HomeAddress" Mode="In" Type="String" />
+            <Parameter Name="City" Mode="In" Type="String" />
+            <Parameter Name="Country" Mode="In" Type="String" />
+            <Parameter Name="Email" Mode="In" Type="String" />
+            <Parameter Name="Fax" Mode="In" Type="String" />
+            <Parameter Name="Typ" Mode="In" Type="String" />
+            <Parameter Name="PostalCode" Mode="In" Type="String" />
+            <Parameter Name="Work_DayTime_Phone" Mode="In" Type="String" />
+            <Parameter Name="Home_Evening_Phone" Mode="In" Type="String" />
+            <Parameter Name="MobilePhone" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="USP_Client_Delete" ReturnType="Collection(Int32)">
+            <Parameter Name="ClientId" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="USP_Client_DeleteById" ReturnType="Collection(Int32)">
+            <Parameter Name="ClientId" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="USP_Client_GetById" ReturnType="Collection(GVRModel.USP_Client_GetById_Result)">
+            <Parameter Name="ClientId" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="USP_Client_UpdateById" ReturnType="Collection(Int32)">
+            <Parameter Name="ClientId" Mode="In" Type="Int32" />
+            <Parameter Name="ClientName" Mode="In" Type="String" />
+            <Parameter Name="Occupation" Mode="In" Type="String" />
+            <Parameter Name="HomeAddress" Mode="In" Type="String" />
+            <Parameter Name="City" Mode="In" Type="String" />
+            <Parameter Name="Country" Mode="In" Type="String" />
+            <Parameter Name="Email" Mode="In" Type="String" />
+            <Parameter Name="Fax" Mode="In" Type="String" />
+            <Parameter Name="Typ" Mode="In" Type="String" />
+            <Parameter Name="PostalCode" Mode="In" Type="String" />
+            <Parameter Name="Work_DayTime_Phone" Mode="In" Type="String" />
+            <Parameter Name="Home_Evening_Phone" Mode="In" Type="String" />
+            <Parameter Name="MobilePhone" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="USP_Currency_Add" ReturnType="Collection(Int32)">
+            <Parameter Name="Currency" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="USP_Currency_Delete" ReturnType="Collection(Int32)">
+            <Parameter Name="CurrencyId" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="USP_currency_GetById" ReturnType="Collection(GVRModel.USP_currency_GetById_Result)">
+            <Parameter Name="CurrencyId" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="USP_Currency_UpdateById" ReturnType="Collection(Int32)">
+            <Parameter Name="CurrencyId" Mode="In" Type="Int32" />
+            <Parameter Name="Currency" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="USP_ElectricalAppliance_Add" ReturnType="Collection(Int32)">
+            <Parameter Name="ElectricalApplianceName" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="USP_ElectricalAppliance_Delete" ReturnType="Collection(Int32)">
+            <Parameter Name="ElectricalApplianceId" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="USP_ElectricalAppliance_GetAll" ReturnType="Collection(GVRModel.USP_ElectricalAppliance_GetAll_Result)" />
+          <FunctionImport Name="USP_ElectricalAppliance_GetById" ReturnType="Collection(GVRModel.USP_ElectricalAppliance_GetById_Result)">
+            <Parameter Name="ElectricalApplianceId" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="USP_ElectricalAppliance_UpdateById" ReturnType="Collection(Int32)">
+            <Parameter Name="ElectricalApplianceId" Mode="In" Type="Int32" />
+            <Parameter Name="ElectricalApplianceName" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="USP_OverLookingView_Add" ReturnType="Collection(Int32)">
+            <Parameter Name="OverLookingView" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="USP_OverLookingView_Delete" ReturnType="Collection(Int32)">
+            <Parameter Name="OverLookingViewId" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="USP_OverLookingView_GetAll" ReturnType="Collection(GVRModel.USP_OverLookingView_GetAll_Result)" />
+          <FunctionImport Name="USP_OverLookingView_GetById" ReturnType="Collection(GVRModel.USP_OverLookingView_GetById_Result)">
+            <Parameter Name="OverLookingViewId" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="USP_OverLookingView_UpdateById" ReturnType="Collection(Int32)">
+            <Parameter Name="OverLookingViewId" Mode="In" Type="Int32" />
+            <Parameter Name="OverLookingView" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="USP_Owner_Currency_Add" ReturnType="Collection(Int32)">
+            <Parameter Name="UnitID" Mode="In" Type="Int32" />
+            <Parameter Name="CurrencyID" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="USP_Owner_Currency_Delete" ReturnType="Collection(Int32)">
+            <Parameter Name="Id" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="USP_Owner_Currency_UpdateById" ReturnType="Collection(Int32)">
+            <Parameter Name="Id" Mode="In" Type="Int32" />
+            <Parameter Name="UnitID" Mode="In" Type="Int32" />
+            <Parameter Name="CurrencyID" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="USP_OwnerRent_Add" ReturnType="Collection(Int32)">
+            <Parameter Name="UnitID" Mode="In" Type="Int32" />
+            <Parameter Name="Rate" Mode="In" Type="Int32" />
+            <Parameter Name="RefNumber" Mode="In" Type="String" />
+            <Parameter Name="ItemDescription" Mode="In" Type="String" />
+            <Parameter Name="CR" Mode="In" Type="Double" />
+            <Parameter Name="DB" Mode="In" Type="Double" />
+            <Parameter Name="Balance" Mode="In" Type="Double" />
+            <Parameter Name="FromDate" Mode="In" Type="DateTime" />
+            <Parameter Name="ToDate" Mode="In" Type="DateTime" />
+          </FunctionImport>
+          <FunctionImport Name="USP_OwnerRent_Delete" ReturnType="Collection(Int32)">
+            <Parameter Name="Id" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="USP_OwnerRent_UpdateById" ReturnType="Collection(Int32)">
+            <Parameter Name="Id" Mode="In" Type="Int32" />
+            <Parameter Name="UnitID" Mode="In" Type="Int32" />
+            <Parameter Name="Rate" Mode="In" Type="Int32" />
+            <Parameter Name="RefNumber" Mode="In" Type="String" />
+            <Parameter Name="ItemDescription" Mode="In" Type="String" />
+            <Parameter Name="CR" Mode="In" Type="Double" />
+            <Parameter Name="DB" Mode="In" Type="Double" />
+            <Parameter Name="Balance" Mode="In" Type="Double" />
+            <Parameter Name="FromDate" Mode="In" Type="DateTime" />
+            <Parameter Name="ToDate" Mode="In" Type="DateTime" />
+          </FunctionImport>
+          <FunctionImport Name="USP_TanentApplication_Add" ReturnType="Collection(Int32)">
+            <Parameter Name="UnitType" Mode="In" Type="String" />
+            <Parameter Name="NumberOfBedRoom" Mode="In" Type="Int32" />
+            <Parameter Name="LocationComment" Mode="In" Type="String" />
+            <Parameter Name="CheckInDate" Mode="In" Type="DateTime" />
+            <Parameter Name="CheckOutDate" Mode="In" Type="DateTime" />
+            <Parameter Name="PurposeOfRent" Mode="In" Type="String" />
+            <Parameter Name="PurposeOfRentComment" Mode="In" Type="String" />
+            <Parameter Name="AirportPickUp" Mode="In" Type="Boolean" />
+            <Parameter Name="AirportPickUpComment" Mode="In" Type="String" />
+            <Parameter Name="BudgetFrom" Mode="In" Type="Double" />
+            <Parameter Name="BudgetTo" Mode="In" Type="Double" />
+            <Parameter Name="BudgetComment" Mode="In" Type="String" />
+            <Parameter Name="TanentId" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="USP_TanentApplication_Delete" ReturnType="Collection(Int32)">
+            <Parameter Name="TanentAppId" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="USP_TanentApplication_GetById" ReturnType="Collection(GVRModel.USP_TanentApplication_GetById_Result)">
+            <Parameter Name="TanentApplicationId" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="USP_TanentApplication_GetByTanentId" ReturnType="Collection(GVRModel.USP_TanentApplication_GetByTanentId_Result)">
+            <Parameter Name="TanentId" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="USP_TanentApplication_UpdateById" ReturnType="Collection(Int32)">
+            <Parameter Name="TanentAppId" Mode="In" Type="Int32" />
+            <Parameter Name="UnitType" Mode="In" Type="String" />
+            <Parameter Name="NumberOfBedRoom" Mode="In" Type="Int32" />
+            <Parameter Name="LocationComment" Mode="In" Type="String" />
+            <Parameter Name="CheckInDate" Mode="In" Type="DateTime" />
+            <Parameter Name="CheckOutDate" Mode="In" Type="DateTime" />
+            <Parameter Name="PurposeOfRent" Mode="In" Type="String" />
+            <Parameter Name="PurposeOfRentComment" Mode="In" Type="String" />
+            <Parameter Name="AirportPickUp" Mode="In" Type="Boolean" />
+            <Parameter Name="AirportPickUpComment" Mode="In" Type="String" />
+            <Parameter Name="BudgetFrom" Mode="In" Type="Double" />
+            <Parameter Name="BudgetTo" Mode="In" Type="Double" />
+            <Parameter Name="BudgetComment" Mode="In" Type="String" />
+            <Parameter Name="TanentId" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="USP_TanentRent_Add" ReturnType="Collection(Int32)">
+            <Parameter Name="UnitID" Mode="In" Type="Int32" />
+            <Parameter Name="FromDate" Mode="In" Type="DateTime" />
+            <Parameter Name="ToDate" Mode="In" Type="DateTime" />
+            <Parameter Name="ApprovedStatus" Mode="In" Type="Boolean" />
+          </FunctionImport>
+          <FunctionImport Name="USP_TanentRent_Delete" ReturnType="Collection(Int32)">
+            <Parameter Name="Id" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="USP_TanentRent_UpdateById" ReturnType="Collection(Int32)">
+            <Parameter Name="Id" Mode="In" Type="Int32" />
+            <Parameter Name="UnitID" Mode="In" Type="Int32" />
+            <Parameter Name="FromDate" Mode="In" Type="DateTime" />
+            <Parameter Name="ToDate" Mode="In" Type="DateTime" />
+            <Parameter Name="ApprovedStatus" Mode="In" Type="Boolean" />
+          </FunctionImport>
+          <FunctionImport Name="USP_Unit_Add" ReturnType="Collection(Int32)">
+            <Parameter Name="OwnerID" Mode="In" Type="Int32" />
+            <Parameter Name="PropertyExtNumber" Mode="In" Type="String" />
+            <Parameter Name="Location" Mode="In" Type="String" />
+            <Parameter Name="NumberOfMasterRooms" Mode="In" Type="Int32" />
+            <Parameter Name="NumberOfBedRooms" Mode="In" Type="Int32" />
+            <Parameter Name="NumberOfBathRooms" Mode="In" Type="Int32" />
+            <Parameter Name="NumberOfMaidRooms" Mode="In" Type="Int32" />
+            <Parameter Name="Area" Mode="In" Type="Int32" />
+            <Parameter Name="Type" Mode="In" Type="String" />
+            <Parameter Name="Flr" Mode="In" Type="String" />
+            <Parameter Name="NumberOfTrrace" Mode="In" Type="Int32" />
+            <Parameter Name="NumberOfRoof" Mode="In" Type="Int32" />
+            <Parameter Name="NumberOfGarden" Mode="In" Type="Int32" />
+            <Parameter Name="NumberOfSwimmingPools" Mode="In" Type="Int32" />
+            <Parameter Name="NumberOfSingleBeds" Mode="In" Type="Int32" />
+            <Parameter Name="NumberOfDoubleBeds" Mode="In" Type="Int32" />
+            <Parameter Name="NumberOfSofaBeds" Mode="In" Type="Int32" />
+            <Parameter Name="HostingNumber" Mode="In" Type="Int32" />
+            <Parameter Name="RentingTerm" Mode="In" Type="Int32" />
+            <Parameter Name="RentingComment" Mode="In" Type="String" />
+            <Parameter Name="MinimumRatePerWeek" Mode="In" Type="Double" />
+            <Parameter Name="MinimumRatePerMonth" Mode="In" Type="Double" />
+            <Parameter Name="GVRDecidedRate" Mode="In" Type="Double" />
+            <Parameter Name="PropertyFurnishingEquiment" Mode="In" Type="Boolean" />
+            <Parameter Name="FurnishingComments" Mode="In" Type="String" />
+            <Parameter Name="ElectricalApplianceComments" Mode="In" Type="String" />
+            <Parameter Name="OverLookingViewComments" Mode="In" Type="String" />
+            <Parameter Name="OveralCondition" Mode="In" Type="String" />
+            <Parameter Name="OveralCondationComment" Mode="In" Type="String" />
+            <Parameter Name="ApprovedStatus" Mode="In" Type="Boolean" />
+          </FunctionImport>
+          <FunctionImport Name="USP_Unit_ElectricalAppliance_Add" ReturnType="Collection(Int32)">
+            <Parameter Name="UnitID" Mode="In" Type="Int32" />
+            <Parameter Name="ElectricalAplliancID" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="USP_Unit_ElectricalAppliance_Delete" ReturnType="Collection(Int32)">
+            <Parameter Name="Id" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="USP_Unit_ElectricalAppliance_UpdateById" ReturnType="Collection(Int32)">
+            <Parameter Name="Id" Mode="In" Type="Int32" />
+            <Parameter Name="UnitID" Mode="In" Type="Int32" />
+            <Parameter Name="ElectricalAplliancID" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="USP_Unit_GetById" ReturnType="Collection(GVRModel.USP_Unit_GetById_Result)">
+            <Parameter Name="UnitId" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="USP_Unit_GetByOwnerId" ReturnType="Collection(GVRModel.USP_Unit_GetByOwnerId_Result)">
+            <Parameter Name="OwnerId" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="USP_Unit_OverLookingView_Add" ReturnType="Collection(Int32)">
+            <Parameter Name="UnitID" Mode="In" Type="Int32" />
+            <Parameter Name="OverLookingViewID" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="USP_Unit_OverLookingView_Delete" ReturnType="Collection(Int32)">
+            <Parameter Name="Id" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="USP_Unit_OverLookingView_UpdateById" ReturnType="Collection(Int32)">
+            <Parameter Name="Id" Mode="In" Type="Int32" />
+            <Parameter Name="UnitID" Mode="In" Type="Int32" />
+            <Parameter Name="OverLookingViewID" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="USP_Unit_Search" ReturnType="Collection(GVRModel.USP_Unit_Search_Result)">
+            <Parameter Name="OwnerID" Mode="In" Type="Int32" />
+            <Parameter Name="Location" Mode="In" Type="String" />
+            <Parameter Name="NumberOfMasterRooms" Mode="In" Type="Int32" />
+            <Parameter Name="NumberOfBedRooms" Mode="In" Type="Int32" />
+            <Parameter Name="NumberOfBathRooms" Mode="In" Type="Int32" />
+            <Parameter Name="NumberOfMaidRooms" Mode="In" Type="Int32" />
+            <Parameter Name="Area" Mode="In" Type="Int32" />
+            <Parameter Name="Type" Mode="In" Type="String" />
+            <Parameter Name="Flr" Mode="In" Type="String" />
+            <Parameter Name="NumberOfTrrace" Mode="In" Type="Int32" />
+            <Parameter Name="NumberOfRoof" Mode="In" Type="Int32" />
+            <Parameter Name="NumberOfGarden" Mode="In" Type="Int32" />
+            <Parameter Name="NumberOfSwimmingPools" Mode="In" Type="Int32" />
+            <Parameter Name="NumberOfSingleBeds" Mode="In" Type="Int32" />
+            <Parameter Name="NumberOfDoubleBeds" Mode="In" Type="Int32" />
+            <Parameter Name="NumberOfSofaBeds" Mode="In" Type="Int32" />
+            <Parameter Name="HostingNumber" Mode="In" Type="Int32" />
+            <Parameter Name="RentingTerm" Mode="In" Type="Int32" />
+            <Parameter Name="RatePerWeek" Mode="In" Type="Double" />
+            <Parameter Name="RatePerMonth" Mode="In" Type="Double" />
+            <Parameter Name="OveralCondition" Mode="In" Type="String" />
+            <Parameter Name="FromDate" Mode="In" Type="DateTime" />
+            <Parameter Name="ToDate" Mode="In" Type="DateTime" />
+          </FunctionImport>
+          <FunctionImport Name="USP_Unit_UpdateById" ReturnType="Collection(Int32)">
+            <Parameter Name="UnitId" Mode="In" Type="Int32" />
+            <Parameter Name="OwnerID" Mode="In" Type="Int32" />
+            <Parameter Name="PropertyExtNumber" Mode="In" Type="String" />
+            <Parameter Name="Location" Mode="In" Type="String" />
+            <Parameter Name="NumberOfMasterRooms" Mode="In" Type="Int32" />
+            <Parameter Name="NumberOfBedRooms" Mode="In" Type="Int32" />
+            <Parameter Name="NumberOfBathRooms" Mode="In" Type="Int32" />
+            <Parameter Name="NumberOfMaidRooms" Mode="In" Type="Int32" />
+            <Parameter Name="Area" Mode="In" Type="Int32" />
+            <Parameter Name="Type" Mode="In" Type="String" />
+            <Parameter Name="Flr" Mode="In" Type="String" />
+            <Parameter Name="NumberOfTrrace" Mode="In" Type="Int32" />
+            <Parameter Name="NumberOfRoof" Mode="In" Type="Int32" />
+            <Parameter Name="NumberOfGarden" Mode="In" Type="Int32" />
+            <Parameter Name="NumberOfSwimmingPools" Mode="In" Type="Int32" />
+            <Parameter Name="NumberOfSingleBeds" Mode="In" Type="Int32" />
+            <Parameter Name="NumberOfDoubleBeds" Mode="In" Type="Int32" />
+            <Parameter Name="NumberOfSofaBeds" Mode="In" Type="Int32" />
+            <Parameter Name="HostingNumber" Mode="In" Type="Int32" />
+            <Parameter Name="RentingTerm" Mode="In" Type="Int32" />
+            <Parameter Name="RentingComment" Mode="In" Type="String" />
+            <Parameter Name="MinimumRatePerWeek" Mode="In" Type="Double" />
+            <Parameter Name="MinimumRatePerMonth" Mode="In" Type="Double" />
+            <Parameter Name="GVRDecidedRate" Mode="In" Type="Double" />
+            <Parameter Name="PropertyFurnishingEquiment" Mode="In" Type="Boolean" />
+            <Parameter Name="FurnishingComments" Mode="In" Type="String" />
+            <Parameter Name="ElectricalApplianceComments" Mode="In" Type="String" />
+            <Parameter Name="OverLookingViewComments" Mode="In" Type="String" />
+            <Parameter Name="OveralCondition" Mode="In" Type="String" />
+            <Parameter Name="OveralCondationComment" Mode="In" Type="String" />
+            <Parameter Name="ApprovedStatus" Mode="In" Type="Boolean" />
+          </FunctionImport>
+          <FunctionImport Name="USP_UnitEditHistory_Add" ReturnType="Collection(Int32)">
+            <Parameter Name="UnitID" Mode="In" Type="Int32" />
+            <Parameter Name="PropertyExtNumber" Mode="In" Type="String" />
+            <Parameter Name="Location" Mode="In" Type="String" />
+            <Parameter Name="NumberOfMasterRooms" Mode="In" Type="Int32" />
+            <Parameter Name="NumberOfBedRooms" Mode="In" Type="Int32" />
+            <Parameter Name="NumberOfBathRooms" Mode="In" Type="Int32" />
+            <Parameter Name="NumberOfMaidRooms" Mode="In" Type="Int32" />
+            <Parameter Name="Area" Mode="In" Type="Int32" />
+            <Parameter Name="Type" Mode="In" Type="String" />
+            <Parameter Name="Flr" Mode="In" Type="String" />
+            <Parameter Name="NumberOfTrrace" Mode="In" Type="Int32" />
+            <Parameter Name="NumberOfRoof" Mode="In" Type="Int32" />
+            <Parameter Name="NumberOfGarden" Mode="In" Type="Int32" />
+            <Parameter Name="NumberOfSwimmingPools" Mode="In" Type="Int32" />
+            <Parameter Name="NumberOfSingleBeds" Mode="In" Type="Int32" />
+            <Parameter Name="NumberOfDoubleBeds" Mode="In" Type="Int32" />
+            <Parameter Name="NumberOfSofaBeds" Mode="In" Type="Int32" />
+            <Parameter Name="HostingNumber" Mode="In" Type="Int32" />
+            <Parameter Name="RentingTerm" Mode="In" Type="Int32" />
+            <Parameter Name="RentingComment" Mode="In" Type="String" />
+            <Parameter Name="MinimumRatePerWeek" Mode="In" Type="Double" />
+            <Parameter Name="MinimumRatePerMonth" Mode="In" Type="Double" />
+            <Parameter Name="GVRDecidedRate" Mode="In" Type="Double" />
+            <Parameter Name="PropertyFurnishingEquiment" Mode="In" Type="Boolean" />
+            <Parameter Name="FurnishingComments" Mode="In" Type="String" />
+            <Parameter Name="ElectricalApplianceComments" Mode="In" Type="String" />
+            <Parameter Name="OverLookingViewComments" Mode="In" Type="String" />
+            <Parameter Name="OveralCondition" Mode="In" Type="String" />
+            <Parameter Name="OveralCondationComment" Mode="In" Type="String" />
+            <Parameter Name="ApprovedStatus" Mode="In" Type="Boolean" />
+            <Parameter Name="EditDate" Mode="In" Type="DateTime" />
+          </FunctionImport>
+          <FunctionImport Name="USP_UnitEditHistory_Delete" ReturnType="Collection(Int32)">
+            <Parameter Name="RecoredId" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="USP_UnitEditHistory_GetById" ReturnType="Collection(GVRModel.USP_UnitEditHistory_GetById_Result)">
+            <Parameter Name="Id" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="USP_UnitEditHistory_UpdateById" ReturnType="Collection(Int32)">
+            <Parameter Name="RecoredId" Mode="In" Type="Int32" />
+            <Parameter Name="PropertyExtNumber" Mode="In" Type="String" />
+            <Parameter Name="Location" Mode="In" Type="String" />
+            <Parameter Name="NumberOfMasterRooms" Mode="In" Type="Int32" />
+            <Parameter Name="NumberOfBedRooms" Mode="In" Type="Int32" />
+            <Parameter Name="NumberOfBathRooms" Mode="In" Type="Int32" />
+            <Parameter Name="NumberOfMaidRooms" Mode="In" Type="Int32" />
+            <Parameter Name="Area" Mode="In" Type="Int32" />
+            <Parameter Name="Type" Mode="In" Type="String" />
+            <Parameter Name="Flr" Mode="In" Type="String" />
+            <Parameter Name="NumberOfTrrace" Mode="In" Type="Int32" />
+            <Parameter Name="NumberOfRoof" Mode="In" Type="Int32" />
+            <Parameter Name="NumberOfGarden" Mode="In" Type="Int32" />
+            <Parameter Name="NumberOfSwimmingPools" Mode="In" Type="Int32" />
+            <Parameter Name="NumberOfSingleBeds" Mode="In" Type="Int32" />
+            <Parameter Name="NumberOfDoubleBeds" Mode="In" Type="Int32" />
+            <Parameter Name="NumberOfSofaBeds" Mode="In" Type="Int32" />
+            <Parameter Name="HostingNumber" Mode="In" Type="Int32" />
+            <Parameter Name="RentingTerm" Mode="In" Type="Int32" />
+            <Parameter Name="RentingComment" Mode="In" Type="String" />
+            <Parameter Name="MinimumRatePerWeek" Mode="In" Type="Double" />
+            <Parameter Name="MinimumRatePerMonth" Mode="In" Type="Double" />
+            <Parameter Name="GVRDecidedRate" Mode="In" Type="Double" />
+            <Parameter Name="PropertyFurnishingEquiment" Mode="In" Type="Boolean" />
+            <Parameter Name="FurnishingComments" Mode="In" Type="String" />
+            <Parameter Name="ElectricalApplianceComments" Mode="In" Type="String" />
+            <Parameter Name="OverLookingViewComments" Mode="In" Type="String" />
+            <Parameter Name="OveralCondition" Mode="In" Type="String" />
+            <Parameter Name="OveralCondationComment" Mode="In" Type="String" />
+            <Parameter Name="EditDate" Mode="In" Type="DateTime" />
+            <Parameter Name="ApprovedStatus" Mode="In" Type="Boolean" />
+          </FunctionImport>
+        </EntityContainer>
+        <EntityType Name="Client">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="ClientName" Type="String" MaxLength="150" Unicode="true" FixedLength="false" />
+          <Property Name="Occupation" Type="String" MaxLength="150" Unicode="true" FixedLength="false" />
+          <Property Name="HomeAddress" Type="String" MaxLength="450" Unicode="true" FixedLength="false" />
+          <Property Name="City" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="Country" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="Email" Type="String" MaxLength="100" Unicode="true" FixedLength="false" />
+          <Property Name="Fax" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="Type" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="PostalCode" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="Work_DayTime_Phone" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="Home_Evening_Phone" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="MobilePhone" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="Active" Type="Boolean" />
+          <NavigationProperty Name="TanentApplication" Relationship="GVRModel.FK_TanentApplication_Client" FromRole="Client" ToRole="TanentApplication" />
+          <NavigationProperty Name="TanentRent" Relationship="GVRModel.FK_TanentRent_Client" FromRole="Client" ToRole="TanentRent" />
+          <NavigationProperty Name="Unit" Relationship="GVRModel.FK_Unit_Client" FromRole="Client" ToRole="Unit" />
+        </EntityType>
+        <EntityType Name="Currency">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Currency1" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="Active" Type="Boolean" />
+          <NavigationProperty Name="Owner_Currency" Relationship="GVRModel.FK_Owner_Currency_Currency" FromRole="Currency" ToRole="Owner_Currency" />
+        </EntityType>
+        <EntityType Name="ElectricalAppliance">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="ElectricalApplianceName" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="Active" Type="Boolean" />
+          <NavigationProperty Name="Unit_ElectricalAppliance" Relationship="GVRModel.FK_Unit_ElectricalAppliance_ElectricalAppliance" FromRole="ElectricalAppliance" ToRole="Unit_ElectricalAppliance" />
+        </EntityType>
+        <EntityType Name="OverLookingView">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="OverLookingView1" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="Active" Type="Boolean" />
+          <NavigationProperty Name="Tanent_OverLokkingView" Relationship="GVRModel.FK_Tanent_OverLokkingView_OverLookingView" FromRole="OverLookingView" ToRole="Tanent_OverLokkingView" />
+          <NavigationProperty Name="Unit_OverLookingView" Relationship="GVRModel.FK_Unit_OverLookingView_OverLookingView" FromRole="OverLookingView" ToRole="Unit_OverLookingView" />
+        </EntityType>
+        <EntityType Name="Owner_Currency">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="UnitID" Type="Int32" />
+          <Property Name="CurrencyID" Type="Int32" />
+          <Property Name="Active" Type="Boolean" />
+          <NavigationProperty Name="Currency" Relationship="GVRModel.FK_Owner_Currency_Currency" FromRole="Owner_Currency" ToRole="Currency" />
+          <NavigationProperty Name="Unit" Relationship="GVRModel.FK_OwnerCurrencyTable_Unit" FromRole="Owner_Currency" ToRole="Unit" />
+        </EntityType>
+        <EntityType Name="OwnerRent">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="UnitID" Type="Int32" />
+          <Property Name="Rate" Type="Int32" />
+          <Property Name="RefNumber" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="ItemDescription" Type="String" MaxLength="450" Unicode="true" FixedLength="false" />
+          <Property Name="CR" Type="Double" />
+          <Property Name="DB" Type="Double" />
+          <Property Name="Balance" Type="Double" />
+          <Property Name="FromDate" Type="DateTime" Precision="3" />
+          <Property Name="ToDate" Type="DateTime" Precision="3" />
+          <Property Name="Active" Type="Boolean" />
+          <NavigationProperty Name="Unit" Relationship="GVRModel.FK_OwnerRent_Unit" FromRole="OwnerRent" ToRole="Unit" />
+        </EntityType>
+        <EntityType Name="sysdiagrams">
+          <Key>
+            <PropertyRef Name="diagram_id" />
+          </Key>
+          <Property Name="name" Type="String" Nullable="false" MaxLength="128" Unicode="true" FixedLength="false" />
+          <Property Name="principal_id" Type="Int32" Nullable="false" />
+          <Property Name="diagram_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="version" Type="Int32" />
+          <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
+        </EntityType>
+        <EntityType Name="Tanent_OverLokkingView">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="AppID" Type="Int32" />
+          <Property Name="OverLookingViewId" Type="Int32" />
+          <Property Name="Active" Type="Boolean" />
+          <NavigationProperty Name="OverLookingView" Relationship="GVRModel.FK_Tanent_OverLokkingView_OverLookingView" FromRole="Tanent_OverLokkingView" ToRole="OverLookingView" />
+          <NavigationProperty Name="TanentApplication" Relationship="GVRModel.FK_Tanent_OverLokkingView_TanentApplication" FromRole="Tanent_OverLokkingView" ToRole="TanentApplication" />
+        </EntityType>
+        <EntityType Name="TanentApplication">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="UnitType" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="NumberOfBedRoom" Type="Int32" />
+          <Property Name="LocationComment" Type="String" MaxLength="Max" Unicode="false" FixedLength="false" />
+          <Property Name="CheckInDate" Type="DateTime" Precision="3" />
+          <Property Name="CheckOutDate" Type="DateTime" Precision="3" />
+          <Property Name="PurposeOfRent" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="PurposeOfRentComment" Type="String" MaxLength="Max" Unicode="false" FixedLength="false" />
+          <Property Name="AirportPickUp" Type="Boolean" />
+          <Property Name="AirportPickUpComment" Type="String" MaxLength="Max" Unicode="false" FixedLength="false" />
+          <Property Name="BudgetFrom" Type="Double" />
+          <Property Name="BudgetTo" Type="Double" />
+          <Property Name="BudgetComment" Type="String" MaxLength="Max" Unicode="false" FixedLength="false" />
+          <Property Name="TanentId" Type="Int32" />
+          <Property Name="Active" Type="Boolean" />
+          <NavigationProperty Name="Client" Relationship="GVRModel.FK_TanentApplication_Client" FromRole="TanentApplication" ToRole="Client" />
+          <NavigationProperty Name="Tanent_OverLokkingView" Relationship="GVRModel.FK_Tanent_OverLokkingView_TanentApplication" FromRole="TanentApplication" ToRole="Tanent_OverLokkingView" />
+        </EntityType>
+        <EntityType Name="TanentRent">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" />
+          <Property Name="TanentID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="UnitID" Type="Int32" />
+          <Property Name="FromDate" Type="DateTime" Precision="3" />
+          <Property Name="ToDate" Type="DateTime" Precision="3" />
+          <Property Name="ApprovedStatus" Type="Boolean" />
+          <Property Name="Active" Type="Boolean" />
+          <NavigationProperty Name="Client" Relationship="GVRModel.FK_TanentRent_Client" FromRole="TanentRent" ToRole="Client" />
+          <NavigationProperty Name="Unit" Relationship="GVRModel.FK_TanentRent_Unit" FromRole="TanentRent" ToRole="Unit" />
+        </EntityType>
+        <EntityType Name="Unit">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="OwnerID" Type="Int32" />
+          <Property Name="PropertyExtNumber" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="Location" Type="String" MaxLength="450" Unicode="true" FixedLength="false" />
+          <Property Name="NumberOfMasterRooms" Type="Int32" />
+          <Property Name="NumberOfBedRooms" Type="Int32" />
+          <Property Name="NumberOfBathRooms" Type="Int32" />
+          <Property Name="NumberOfMaidRooms" Type="Int32" />
+          <Property Name="Area" Type="Int32" />
+          <Property Name="Type" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="Floor" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="NumberOfTrrace" Type="Int32" />
+          <Property Name="NumberOfRoof" Type="Int32" />
+          <Property Name="NumberOfGarden" Type="Int32" />
+          <Property Name="NumberOfSwimmingPools" Type="Int32" />
+          <Property Name="NumberOfSingleBeds" Type="Int32" />
+          <Property Name="NumberOfDoubleBeds" Type="Int32" />
+          <Property Name="NumberOfSofaBeds" Type="Int32" />
+          <Property Name="HostingNumber" Type="Int32" />
+          <Property Name="RentingTerm" Type="Int32" />
+          <Property Name="RentingComment" Type="String" MaxLength="Max" Unicode="false" FixedLength="false" />
+          <Property Name="MinimumRatePerWeek" Type="Double" />
+          <Property Name="MinimumRatePerMonth" Type="Double" />
+          <Property Name="GVRDecidedRate" Type="Double" />
+          <Property Name="PropertyFurnishingEquiment" Type="Boolean" />
+          <Property Name="FurnishingComments" Type="String" MaxLength="Max" Unicode="false" FixedLength="false" />
+          <Property Name="ElectricalApplianceComments" Type="String" MaxLength="Max" Unicode="false" FixedLength="false" />
+          <Property Name="OverLookingViewComments" Type="String" MaxLength="Max" Unicode="false" FixedLength="false" />
+          <Property Name="OveralCondition" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="OveralCondationComment" Type="String" MaxLength="Max" Unicode="false" FixedLength="false" />
+          <Property Name="ApprovedStatus" Type="Boolean" />
+          <Property Name="Active" Type="Boolean" />
+          <NavigationProperty Name="Client" Relationship="GVRModel.FK_Unit_Client" FromRole="Unit" ToRole="Client" />
+          <NavigationProperty Name="Owner_Currency" Relationship="GVRModel.FK_OwnerCurrencyTable_Unit" FromRole="Unit" ToRole="Owner_Currency" />
+          <NavigationProperty Name="OwnerRent" Relationship="GVRModel.FK_OwnerRent_Unit" FromRole="Unit" ToRole="OwnerRent" />
+          <NavigationProperty Name="TanentRent" Relationship="GVRModel.FK_TanentRent_Unit" FromRole="Unit" ToRole="TanentRent" />
+          <NavigationProperty Name="Unit_ElectricalAppliance" Relationship="GVRModel.FK_ElectricalAppliance_Unit" FromRole="Unit" ToRole="Unit_ElectricalAppliance" />
+          <NavigationProperty Name="UnitEditHistory" Relationship="GVRModel.FK_Unit_Edit_Unit" FromRole="Unit" ToRole="UnitEditHistory" />
+          <NavigationProperty Name="Unit_OverLookingView" Relationship="GVRModel.FK_Unit_OverLookingView_Unit" FromRole="Unit" ToRole="Unit_OverLookingView" />
+        </EntityType>
+        <EntityType Name="Unit_ElectricalAppliance">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="UnitID" Type="Int32" />
+          <Property Name="ElectricalAplliancID" Type="Int32" />
+          <Property Name="Active" Type="Boolean" />
+          <NavigationProperty Name="ElectricalAppliance" Relationship="GVRModel.FK_Unit_ElectricalAppliance_ElectricalAppliance" FromRole="Unit_ElectricalAppliance" ToRole="ElectricalAppliance" />
+          <NavigationProperty Name="Unit" Relationship="GVRModel.FK_ElectricalAppliance_Unit" FromRole="Unit_ElectricalAppliance" ToRole="Unit" />
+        </EntityType>
+        <EntityType Name="Unit_OverLookingView">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="UnitID" Type="Int32" />
+          <Property Name="OverLookingViewID" Type="Int32" />
+          <Property Name="Active" Type="Boolean" />
+          <NavigationProperty Name="OverLookingView" Relationship="GVRModel.FK_Unit_OverLookingView_OverLookingView" FromRole="Unit_OverLookingView" ToRole="OverLookingView" />
+          <NavigationProperty Name="Unit" Relationship="GVRModel.FK_Unit_OverLookingView_Unit" FromRole="Unit_OverLookingView" ToRole="Unit" />
+        </EntityType>
+        <EntityType Name="UnitEditHistory">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="UnitID" Type="Int32" />
+          <Property Name="PropertyExtNumber" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="Location" Type="String" MaxLength="450" Unicode="true" FixedLength="false" />
+          <Property Name="NumberOfMasterRooms" Type="Int32" />
+          <Property Name="NumberOfBedRooms" Type="Int32" />
+          <Property Name="NumberOfBathRooms" Type="Int32" />
+          <Property Name="NumberOfMaidRooms" Type="Int32" />
+          <Property Name="Area" Type="Int32" />
+          <Property Name="Type" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="Floor" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="NumberOfTrrace" Type="Int32" />
+          <Property Name="NumberOfRoof" Type="Int32" />
+          <Property Name="NumberOfGarden" Type="Int32" />
+          <Property Name="NumberOfSwimmingPools" Type="Int32" />
+          <Property Name="NumberOfSingleBeds" Type="Int32" />
+          <Property Name="NumberOfDoubleBeds" Type="Int32" />
+          <Property Name="NumberOfSofaBeds" Type="Int32" />
+          <Property Name="HostingNumber" Type="Int32" />
+          <Property Name="RentingTerm" Type="Int32" />
+          <Property Name="RentingComment" Type="String" MaxLength="Max" Unicode="false" FixedLength="false" />
+          <Property Name="MinimumRatePerWeek" Type="Double" />
+          <Property Name="MinimumRatePerMonth" Type="Double" />
+          <Property Name="GVRDecidedRate" Type="Double" />
+          <Property Name="PropertyFurnishingEquiment" Type="Boolean" />
+          <Property Name="FurnishingComments" Type="String" MaxLength="Max" Unicode="false" FixedLength="false" />
+          <Property Name="ElectricalApplianceComments" Type="String" MaxLength="Max" Unicode="false" FixedLength="false" />
+          <Property Name="OverLookingViewComments" Type="String" MaxLength="Max" Unicode="false" FixedLength="false" />
+          <Property Name="OveralCondition" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="OveralCondationComment" Type="String" MaxLength="Max" Unicode="false" FixedLength="false" />
+          <Property Name="EditDate" Type="DateTime" Precision="3" />
+          <Property Name="ApprovedStatus" Type="Boolean" />
+          <Property Name="Active" Type="Boolean" />
+          <NavigationProperty Name="Unit" Relationship="GVRModel.FK_Unit_Edit_Unit" FromRole="UnitEditHistory" ToRole="Unit" />
+        </EntityType>
+        <Association Name="FK_TanentApplication_Client">
+          <End Role="Client" Type="GVRModel.Client" Multiplicity="0..1" />
+          <End Role="TanentApplication" Type="GVRModel.TanentApplication" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Client">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="TanentApplication">
+              <PropertyRef Name="TanentId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_TanentRent_Client">
+          <End Role="Client" Type="GVRModel.Client" Multiplicity="1" />
+          <End Role="TanentRent" Type="GVRModel.TanentRent" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Client">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="TanentRent">
+              <PropertyRef Name="TanentID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Unit_Client">
+          <End Role="Client" Type="GVRModel.Client" Multiplicity="0..1" />
+          <End Role="Unit" Type="GVRModel.Unit" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Client">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="Unit">
+              <PropertyRef Name="OwnerID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Owner_Currency_Currency">
+          <End Role="Currency" Type="GVRModel.Currency" Multiplicity="0..1" />
+          <End Role="Owner_Currency" Type="GVRModel.Owner_Currency" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Currency">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="Owner_Currency">
+              <PropertyRef Name="CurrencyID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Unit_ElectricalAppliance_ElectricalAppliance">
+          <End Role="ElectricalAppliance" Type="GVRModel.ElectricalAppliance" Multiplicity="0..1" />
+          <End Role="Unit_ElectricalAppliance" Type="GVRModel.Unit_ElectricalAppliance" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ElectricalAppliance">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="Unit_ElectricalAppliance">
+              <PropertyRef Name="ElectricalAplliancID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Tanent_OverLokkingView_OverLookingView">
+          <End Role="OverLookingView" Type="GVRModel.OverLookingView" Multiplicity="0..1" />
+          <End Role="Tanent_OverLokkingView" Type="GVRModel.Tanent_OverLokkingView" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="OverLookingView">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="Tanent_OverLokkingView">
+              <PropertyRef Name="OverLookingViewId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Unit_OverLookingView_OverLookingView">
+          <End Role="OverLookingView" Type="GVRModel.OverLookingView" Multiplicity="0..1" />
+          <End Role="Unit_OverLookingView" Type="GVRModel.Unit_OverLookingView" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="OverLookingView">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="Unit_OverLookingView">
+              <PropertyRef Name="OverLookingViewID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_OwnerCurrencyTable_Unit">
+          <End Role="Unit" Type="GVRModel.Unit" Multiplicity="0..1" />
+          <End Role="Owner_Currency" Type="GVRModel.Owner_Currency" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Unit">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="Owner_Currency">
+              <PropertyRef Name="UnitID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_OwnerRent_Unit">
+          <End Role="Unit" Type="GVRModel.Unit" Multiplicity="0..1" />
+          <End Role="OwnerRent" Type="GVRModel.OwnerRent" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Unit">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="OwnerRent">
+              <PropertyRef Name="UnitID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Tanent_OverLokkingView_TanentApplication">
+          <End Role="TanentApplication" Type="GVRModel.TanentApplication" Multiplicity="0..1" />
+          <End Role="Tanent_OverLokkingView" Type="GVRModel.Tanent_OverLokkingView" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TanentApplication">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="Tanent_OverLokkingView">
+              <PropertyRef Name="AppID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_TanentRent_Unit">
+          <End Role="Unit" Type="GVRModel.Unit" Multiplicity="0..1" />
+          <End Role="TanentRent" Type="GVRModel.TanentRent" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Unit">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="TanentRent">
+              <PropertyRef Name="UnitID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_ElectricalAppliance_Unit">
+          <End Role="Unit" Type="GVRModel.Unit" Multiplicity="0..1" />
+          <End Role="Unit_ElectricalAppliance" Type="GVRModel.Unit_ElectricalAppliance" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Unit">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="Unit_ElectricalAppliance">
+              <PropertyRef Name="UnitID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Unit_Edit_Unit">
+          <End Role="Unit" Type="GVRModel.Unit" Multiplicity="0..1" />
+          <End Role="UnitEditHistory" Type="GVRModel.UnitEditHistory" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Unit">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="UnitEditHistory">
+              <PropertyRef Name="UnitID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Unit_OverLookingView_Unit">
+          <End Role="Unit" Type="GVRModel.Unit" Multiplicity="0..1" />
+          <End Role="Unit_OverLookingView" Type="GVRModel.Unit_OverLookingView" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Unit">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="Unit_OverLookingView">
+              <PropertyRef Name="UnitID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <ComplexType Name="sp_helpdiagramdefinition_Result">
+          <Property Type="Int32" Name="version" Nullable="true" />
+          <Property Type="Binary" Name="definition" Nullable="true" />
+        </ComplexType>
+        <ComplexType Name="sp_helpdiagrams_Result">
+          <Property Type="String" Name="Database" Nullable="true" MaxLength="128" />
+          <Property Type="String" Name="Name" Nullable="false" MaxLength="128" />
+          <Property Type="Int32" Name="ID" Nullable="false" />
+          <Property Type="String" Name="Owner" Nullable="true" MaxLength="128" />
+          <Property Type="Int32" Name="OwnerID" Nullable="false" />
+        </ComplexType>
+        <ComplexType Name="USP_Client_GetById_Result">
+          <Property Type="Int32" Name="ID" Nullable="false" />
+          <Property Type="String" Name="ClientName" Nullable="true" MaxLength="150" />
+          <Property Type="String" Name="Occupation" Nullable="true" MaxLength="150" />
+          <Property Type="String" Name="HomeAddress" Nullable="true" MaxLength="450" />
+          <Property Type="String" Name="City" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="Country" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="Email" Nullable="true" MaxLength="100" />
+          <Property Type="String" Name="Fax" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="Type" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="PostalCode" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="Work_DayTime_Phone" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="Home_Evening_Phone" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="MobilePhone" Nullable="true" MaxLength="50" />
+          <Property Type="Boolean" Name="Active" Nullable="true" />
+        </ComplexType>
+        <ComplexType Name="USP_currency_GetById_Result">
+          <Property Type="Int32" Name="ID" Nullable="false" />
+          <Property Type="String" Name="Currency" Nullable="true" MaxLength="50" />
+          <Property Type="Boolean" Name="Active" Nullable="true" />
+        </ComplexType>
+        <ComplexType Name="USP_ElectricalAppliance_GetAll_Result">
+          <Property Type="Int32" Name="ID" Nullable="false" />
+          <Property Type="String" Name="ElectricalApplianceName" Nullable="true" MaxLength="50" />
+          <Property Type="Boolean" Name="Active" Nullable="true" />
+        </ComplexType>
+        <ComplexType Name="USP_ElectricalAppliance_GetById_Result">
+          <Property Type="Int32" Name="ID" Nullable="false" />
+          <Property Type="String" Name="ElectricalApplianceName" Nullable="true" MaxLength="50" />
+          <Property Type="Boolean" Name="Active" Nullable="true" />
+        </ComplexType>
+        <ComplexType Name="USP_OverLookingView_GetAll_Result">
+          <Property Type="Int32" Name="ID" Nullable="false" />
+          <Property Type="String" Name="OverLookingView" Nullable="true" MaxLength="50" />
+          <Property Type="Boolean" Name="Active" Nullable="true" />
+        </ComplexType>
+        <ComplexType Name="USP_OverLookingView_GetById_Result">
+          <Property Type="Int32" Name="ID" Nullable="false" />
+          <Property Type="String" Name="OverLookingView" Nullable="true" MaxLength="50" />
+          <Property Type="Boolean" Name="Active" Nullable="true" />
+        </ComplexType>
+        <ComplexType Name="USP_TanentApplication_GetById_Result">
+          <Property Type="Int32" Name="ID" Nullable="false" />
+          <Property Type="String" Name="UnitType" Nullable="true" MaxLength="50" />
+          <Property Type="Int32" Name="NumberOfBedRoom" Nullable="true" />
+          <Property Type="String" Name="LocationComment" Nullable="true" MaxLength="Max" />
+          <Property Type="DateTime" Name="CheckInDate" Nullable="true" Precision="23" />
+          <Property Type="DateTime" Name="CheckOutDate" Nullable="true" Precision="23" />
+          <Property Type="String" Name="PurposeOfRent" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="PurposeOfRentComment" Nullable="true" MaxLength="Max" />
+          <Property Type="Boolean" Name="AirportPickUp" Nullable="true" />
+          <Property Type="String" Name="AirportPickUpComment" Nullable="true" MaxLength="Max" />
+          <Property Type="Double" Name="BudgetFrom" Nullable="true" />
+          <Property Type="Double" Name="BudgetTo" Nullable="true" />
+          <Property Type="String" Name="BudgetComment" Nullable="true" MaxLength="Max" />
+          <Property Type="Int32" Name="TanentId" Nullable="true" />
+          <Property Type="Boolean" Name="Active" Nullable="true" />
+        </ComplexType>
+        <ComplexType Name="USP_TanentApplication_GetByTanentId_Result">
+          <Property Type="Int32" Name="ID" Nullable="false" />
+          <Property Type="String" Name="UnitType" Nullable="true" MaxLength="50" />
+          <Property Type="Int32" Name="NumberOfBedRoom" Nullable="true" />
+          <Property Type="String" Name="LocationComment" Nullable="true" MaxLength="Max" />
+          <Property Type="DateTime" Name="CheckInDate" Nullable="true" Precision="23" />
+          <Property Type="DateTime" Name="CheckOutDate" Nullable="true" Precision="23" />
+          <Property Type="String" Name="PurposeOfRent" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="PurposeOfRentComment" Nullable="true" MaxLength="Max" />
+          <Property Type="Boolean" Name="AirportPickUp" Nullable="true" />
+          <Property Type="String" Name="AirportPickUpComment" Nullable="true" MaxLength="Max" />
+          <Property Type="Double" Name="BudgetFrom" Nullable="true" />
+          <Property Type="Double" Name="BudgetTo" Nullable="true" />
+          <Property Type="String" Name="BudgetComment" Nullable="true" MaxLength="Max" />
+          <Property Type="Int32" Name="TanentId" Nullable="true" />
+          <Property Type="Boolean" Name="Active" Nullable="true" />
+        </ComplexType>
+        <ComplexType Name="USP_Unit_GetById_Result">
+          <Property Type="Int32" Name="ID" Nullable="false" />
+          <Property Type="Int32" Name="OwnerID" Nullable="true" />
+          <Property Type="String" Name="PropertyExtNumber" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="Location" Nullable="true" MaxLength="450" />
+          <Property Type="Int32" Name="NumberOfMasterRooms" Nullable="true" />
+          <Property Type="Int32" Name="NumberOfBedRooms" Nullable="true" />
+          <Property Type="Int32" Name="NumberOfBathRooms" Nullable="true" />
+          <Property Type="Int32" Name="NumberOfMaidRooms" Nullable="true" />
+          <Property Type="Int32" Name="Area" Nullable="true" />
+          <Property Type="String" Name="Type" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="Floor" Nullable="true" MaxLength="50" />
+          <Property Type="Int32" Name="NumberOfTrrace" Nullable="true" />
+          <Property Type="Int32" Name="NumberOfRoof" Nullable="true" />
+          <Property Type="Int32" Name="NumberOfGarden" Nullable="true" />
+          <Property Type="Int32" Name="NumberOfSwimmingPools" Nullable="true" />
+          <Property Type="Int32" Name="NumberOfSingleBeds" Nullable="true" />
+          <Property Type="Int32" Name="NumberOfDoubleBeds" Nullable="true" />
+          <Property Type="Int32" Name="NumberOfSofaBeds" Nullable="true" />
+          <Property Type="Int32" Name="HostingNumber" Nullable="true" />
+          <Property Type="Int32" Name="RentingTerm" Nullable="true" />
+          <Property Type="String" Name="RentingComment" Nullable="true" MaxLength="Max" />
+          <Property Type="Double" Name="MinimumRatePerWeek" Nullable="true" />
+          <Property Type="Double" Name="MinimumRatePerMonth" Nullable="true" />
+          <Property Type="Double" Name="GVRDecidedRate" Nullable="true" />
+          <Property Type="Boolean" Name="PropertyFurnishingEquiment" Nullable="true" />
+          <Property Type="String" Name="FurnishingComments" Nullable="true" MaxLength="Max" />
+          <Property Type="String" Name="ElectricalApplianceComments" Nullable="true" MaxLength="Max" />
+          <Property Type="String" Name="OverLookingViewComments" Nullable="true" MaxLength="Max" />
+          <Property Type="String" Name="OveralCondition" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="OveralCondationComment" Nullable="true" MaxLength="Max" />
+          <Property Type="Boolean" Name="ApprovedStatus" Nullable="true" />
+          <Property Type="Boolean" Name="Active" Nullable="true" />
+        </ComplexType>
+        <ComplexType Name="USP_Unit_GetByOwnerId_Result">
+          <Property Type="Int32" Name="ID" Nullable="false" />
+          <Property Type="Int32" Name="OwnerID" Nullable="true" />
+          <Property Type="String" Name="PropertyExtNumber" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="Location" Nullable="true" MaxLength="450" />
+          <Property Type="Int32" Name="NumberOfMasterRooms" Nullable="true" />
+          <Property Type="Int32" Name="NumberOfBedRooms" Nullable="true" />
+          <Property Type="Int32" Name="NumberOfBathRooms" Nullable="true" />
+          <Property Type="Int32" Name="NumberOfMaidRooms" Nullable="true" />
+          <Property Type="Int32" Name="Area" Nullable="true" />
+          <Property Type="String" Name="Type" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="Floor" Nullable="true" MaxLength="50" />
+          <Property Type="Int32" Name="NumberOfTrrace" Nullable="true" />
+          <Property Type="Int32" Name="NumberOfRoof" Nullable="true" />
+          <Property Type="Int32" Name="NumberOfGarden" Nullable="true" />
+          <Property Type="Int32" Name="NumberOfSwimmingPools" Nullable="true" />
+          <Property Type="Int32" Name="NumberOfSingleBeds" Nullable="true" />
+          <Property Type="Int32" Name="NumberOfDoubleBeds" Nullable="true" />
+          <Property Type="Int32" Name="NumberOfSofaBeds" Nullable="true" />
+          <Property Type="Int32" Name="HostingNumber" Nullable="true" />
+          <Property Type="Int32" Name="RentingTerm" Nullable="true" />
+          <Property Type="String" Name="RentingComment" Nullable="true" MaxLength="Max" />
+          <Property Type="Double" Name="MinimumRatePerWeek" Nullable="true" />
+          <Property Type="Double" Name="MinimumRatePerMonth" Nullable="true" />
+          <Property Type="Double" Name="GVRDecidedRate" Nullable="true" />
+          <Property Type="Boolean" Name="PropertyFurnishingEquiment" Nullable="true" />
+          <Property Type="String" Name="FurnishingComments" Nullable="true" MaxLength="Max" />
+          <Property Type="String" Name="ElectricalApplianceComments" Nullable="true" MaxLength="Max" />
+          <Property Type="String" Name="OverLookingViewComments" Nullable="true" MaxLength="Max" />
+          <Property Type="String" Name="OveralCondition" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="OveralCondationComment" Nullable="true" MaxLength="Max" />
+          <Property Type="Boolean" Name="ApprovedStatus" Nullable="true" />
+          <Property Type="Boolean" Name="Active" Nullable="true" />
+        </ComplexType>
+        <ComplexType Name="USP_Unit_Search_Result">
+          <Property Type="Int32" Name="ID" Nullable="false" />
+          <Property Type="Int32" Name="OwnerID" Nullable="true" />
+          <Property Type="String" Name="PropertyExtNumber" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="Location" Nullable="true" MaxLength="450" />
+          <Property Type="Int32" Name="NumberOfMasterRooms" Nullable="true" />
+          <Property Type="Int32" Name="NumberOfBedRooms" Nullable="true" />
+          <Property Type="Int32" Name="NumberOfBathRooms" Nullable="true" />
+          <Property Type="Int32" Name="NumberOfMaidRooms" Nullable="true" />
+          <Property Type="Int32" Name="Area" Nullable="true" />
+          <Property Type="String" Name="Type" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="Floor" Nullable="true" MaxLength="50" />
+          <Property Type="Int32" Name="NumberOfTrrace" Nullable="true" />
+          <Property Type="Int32" Name="NumberOfRoof" Nullable="true" />
+          <Property Type="Int32" Name="NumberOfGarden" Nullable="true" />
+          <Property Type="Int32" Name="NumberOfSwimmingPools" Nullable="true" />
+          <Property Type="Int32" Name="NumberOfSingleBeds" Nullable="true" />
+          <Property Type="Int32" Name="NumberOfDoubleBeds" Nullable="true" />
+          <Property Type="Int32" Name="NumberOfSofaBeds" Nullable="true" />
+          <Property Type="Int32" Name="HostingNumber" Nullable="true" />
+          <Property Type="Int32" Name="RentingTerm" Nullable="true" />
+          <Property Type="String" Name="RentingComment" Nullable="true" MaxLength="Max" />
+          <Property Type="Double" Name="MinimumRatePerWeek" Nullable="true" />
+          <Property Type="Double" Name="MinimumRatePerMonth" Nullable="true" />
+          <Property Type="Double" Name="GVRDecidedRate" Nullable="true" />
+          <Property Type="Boolean" Name="PropertyFurnishingEquiment" Nullable="true" />
+          <Property Type="String" Name="FurnishingComments" Nullable="true" MaxLength="Max" />
+          <Property Type="String" Name="ElectricalApplianceComments" Nullable="true" MaxLength="Max" />
+          <Property Type="String" Name="OverLookingViewComments" Nullable="true" MaxLength="Max" />
+          <Property Type="String" Name="OveralCondition" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="OveralCondationComment" Nullable="true" MaxLength="Max" />
+          <Property Type="Boolean" Name="ApprovedStatus" Nullable="true" />
+          <Property Type="Boolean" Name="Active" Nullable="true" />
+        </ComplexType>
+        <ComplexType Name="USP_UnitEditHistory_GetById_Result">
+          <Property Type="Int32" Name="ID" Nullable="false" />
+          <Property Type="Int32" Name="UnitID" Nullable="true" />
+          <Property Type="String" Name="PropertyExtNumber" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="Location" Nullable="true" MaxLength="450" />
+          <Property Type="Int32" Name="NumberOfMasterRooms" Nullable="true" />
+          <Property Type="Int32" Name="NumberOfBedRooms" Nullable="true" />
+          <Property Type="Int32" Name="NumberOfBathRooms" Nullable="true" />
+          <Property Type="Int32" Name="NumberOfMaidRooms" Nullable="true" />
+          <Property Type="Int32" Name="Area" Nullable="true" />
+          <Property Type="String" Name="Type" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="Floor" Nullable="true" MaxLength="50" />
+          <Property Type="Int32" Name="NumberOfTrrace" Nullable="true" />
+          <Property Type="Int32" Name="NumberOfRoof" Nullable="true" />
+          <Property Type="Int32" Name="NumberOfGarden" Nullable="true" />
+          <Property Type="Int32" Name="NumberOfSwimmingPools" Nullable="true" />
+          <Property Type="Int32" Name="NumberOfSingleBeds" Nullable="true" />
+          <Property Type="Int32" Name="NumberOfDoubleBeds" Nullable="true" />
+          <Property Type="Int32" Name="NumberOfSofaBeds" Nullable="true" />
+          <Property Type="Int32" Name="HostingNumber" Nullable="true" />
+          <Property Type="Int32" Name="RentingTerm" Nullable="true" />
+          <Property Type="String" Name="RentingComment" Nullable="true" MaxLength="Max" />
+          <Property Type="Double" Name="MinimumRatePerWeek" Nullable="true" />
+          <Property Type="Double" Name="MinimumRatePerMonth" Nullable="true" />
+          <Property Type="Double" Name="GVRDecidedRate" Nullable="true" />
+          <Property Type="Boolean" Name="PropertyFurnishingEquiment" Nullable="true" />
+          <Property Type="String" Name="FurnishingComments" Nullable="true" MaxLength="Max" />
+          <Property Type="String" Name="ElectricalApplianceComments" Nullable="true" MaxLength="Max" />
+          <Property Type="String" Name="OverLookingViewComments" Nullable="true" MaxLength="Max" />
+          <Property Type="String" Name="OveralCondition" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="OveralCondationComment" Nullable="true" MaxLength="Max" />
+          <Property Type="DateTime" Name="EditDate" Nullable="true" Precision="23" />
+          <Property Type="Boolean" Name="ApprovedStatus" Nullable="true" />
+          <Property Type="Boolean" Name="Active" Nullable="true" />
+        </ComplexType>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="GVRModelStoreContainer" CdmEntityContainer="GVREntities">
+          <EntitySetMapping Name="Client">
+            <EntityTypeMapping TypeName="GVRModel.Client">
+              <MappingFragment StoreEntitySet="Client">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="ClientName" ColumnName="ClientName" />
+                <ScalarProperty Name="Occupation" ColumnName="Occupation" />
+                <ScalarProperty Name="HomeAddress" ColumnName="HomeAddress" />
+                <ScalarProperty Name="City" ColumnName="City" />
+                <ScalarProperty Name="Country" ColumnName="Country" />
+                <ScalarProperty Name="Email" ColumnName="Email" />
+                <ScalarProperty Name="Fax" ColumnName="Fax" />
+                <ScalarProperty Name="Type" ColumnName="Type" />
+                <ScalarProperty Name="PostalCode" ColumnName="PostalCode" />
+                <ScalarProperty Name="Work_DayTime_Phone" ColumnName="Work_DayTime_Phone" />
+                <ScalarProperty Name="Home_Evening_Phone" ColumnName="Home_Evening_Phone" />
+                <ScalarProperty Name="MobilePhone" ColumnName="MobilePhone" />
+                <ScalarProperty Name="Active" ColumnName="Active" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Currency">
+            <EntityTypeMapping TypeName="GVRModel.Currency">
+              <MappingFragment StoreEntitySet="Currency">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="Currency1" ColumnName="Currency" />
+                <ScalarProperty Name="Active" ColumnName="Active" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ElectricalAppliance">
+            <EntityTypeMapping TypeName="GVRModel.ElectricalAppliance">
+              <MappingFragment StoreEntitySet="ElectricalAppliance">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="ElectricalApplianceName" ColumnName="ElectricalApplianceName" />
+                <ScalarProperty Name="Active" ColumnName="Active" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="OverLookingView">
+            <EntityTypeMapping TypeName="GVRModel.OverLookingView">
+              <MappingFragment StoreEntitySet="OverLookingView">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="OverLookingView1" ColumnName="OverLookingView" />
+                <ScalarProperty Name="Active" ColumnName="Active" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Owner_Currency">
+            <EntityTypeMapping TypeName="GVRModel.Owner_Currency">
+              <MappingFragment StoreEntitySet="Owner_Currency">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="UnitID" ColumnName="UnitID" />
+                <ScalarProperty Name="CurrencyID" ColumnName="CurrencyID" />
+                <ScalarProperty Name="Active" ColumnName="Active" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="OwnerRent">
+            <EntityTypeMapping TypeName="GVRModel.OwnerRent">
+              <MappingFragment StoreEntitySet="OwnerRent">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="UnitID" ColumnName="UnitID" />
+                <ScalarProperty Name="Rate" ColumnName="Rate" />
+                <ScalarProperty Name="RefNumber" ColumnName="RefNumber" />
+                <ScalarProperty Name="ItemDescription" ColumnName="ItemDescription" />
+                <ScalarProperty Name="CR" ColumnName="CR" />
+                <ScalarProperty Name="DB" ColumnName="DB" />
+                <ScalarProperty Name="Balance" ColumnName="Balance" />
+                <ScalarProperty Name="FromDate" ColumnName="FromDate" />
+                <ScalarProperty Name="ToDate" ColumnName="ToDate" />
+                <ScalarProperty Name="Active" ColumnName="Active" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="sysdiagrams">
+            <EntityTypeMapping TypeName="GVRModel.sysdiagrams">
+              <MappingFragment StoreEntitySet="sysdiagrams">
+                <ScalarProperty Name="name" ColumnName="name" />
+                <ScalarProperty Name="principal_id" ColumnName="principal_id" />
+                <ScalarProperty Name="diagram_id" ColumnName="diagram_id" />
+                <ScalarProperty Name="version" ColumnName="version" />
+                <ScalarProperty Name="definition" ColumnName="definition" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Tanent_OverLokkingView">
+            <EntityTypeMapping TypeName="GVRModel.Tanent_OverLokkingView">
+              <MappingFragment StoreEntitySet="Tanent_OverLokkingView">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="AppID" ColumnName="AppID" />
+                <ScalarProperty Name="OverLookingViewId" ColumnName="OverLookingViewId" />
+                <ScalarProperty Name="Active" ColumnName="Active" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TanentApplication">
+            <EntityTypeMapping TypeName="GVRModel.TanentApplication">
+              <MappingFragment StoreEntitySet="TanentApplication">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="UnitType" ColumnName="UnitType" />
+                <ScalarProperty Name="NumberOfBedRoom" ColumnName="NumberOfBedRoom" />
+                <ScalarProperty Name="LocationComment" ColumnName="LocationComment" />
+                <ScalarProperty Name="CheckInDate" ColumnName="CheckInDate" />
+                <ScalarProperty Name="CheckOutDate" ColumnName="CheckOutDate" />
+                <ScalarProperty Name="PurposeOfRent" ColumnName="PurposeOfRent" />
+                <ScalarProperty Name="PurposeOfRentComment" ColumnName="PurposeOfRentComment" />
+                <ScalarProperty Name="AirportPickUp" ColumnName="AirportPickUp" />
+                <ScalarProperty Name="AirportPickUpComment" ColumnName="AirportPickUpComment" />
+                <ScalarProperty Name="BudgetFrom" ColumnName="BudgetFrom" />
+                <ScalarProperty Name="BudgetTo" ColumnName="BudgetTo" />
+                <ScalarProperty Name="BudgetComment" ColumnName="BudgetComment" />
+                <ScalarProperty Name="TanentId" ColumnName="TanentId" />
+                <ScalarProperty Name="Active" ColumnName="Active" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TanentRent">
+            <EntityTypeMapping TypeName="GVRModel.TanentRent">
+              <MappingFragment StoreEntitySet="TanentRent">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="TanentID" ColumnName="TanentID" />
+                <ScalarProperty Name="UnitID" ColumnName="UnitID" />
+                <ScalarProperty Name="FromDate" ColumnName="FromDate" />
+                <ScalarProperty Name="ToDate" ColumnName="ToDate" />
+                <ScalarProperty Name="ApprovedStatus" ColumnName="ApprovedStatus" />
+                <ScalarProperty Name="Active" ColumnName="Active" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Unit">
+            <EntityTypeMapping TypeName="GVRModel.Unit">
+              <MappingFragment StoreEntitySet="Unit">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="OwnerID" ColumnName="OwnerID" />
+                <ScalarProperty Name="PropertyExtNumber" ColumnName="PropertyExtNumber" />
+                <ScalarProperty Name="Location" ColumnName="Location" />
+                <ScalarProperty Name="NumberOfMasterRooms" ColumnName="NumberOfMasterRooms" />
+                <ScalarProperty Name="NumberOfBedRooms" ColumnName="NumberOfBedRooms" />
+                <ScalarProperty Name="NumberOfBathRooms" ColumnName="NumberOfBathRooms" />
+                <ScalarProperty Name="NumberOfMaidRooms" ColumnName="NumberOfMaidRooms" />
+                <ScalarProperty Name="Area" ColumnName="Area" />
+                <ScalarProperty Name="Type" ColumnName="Type" />
+                <ScalarProperty Name="Floor" ColumnName="Floor" />
+                <ScalarProperty Name="NumberOfTrrace" ColumnName="NumberOfTrrace" />
+                <ScalarProperty Name="NumberOfRoof" ColumnName="NumberOfRoof" />
+                <ScalarProperty Name="NumberOfGarden" ColumnName="NumberOfGarden" />
+                <ScalarProperty Name="NumberOfSwimmingPools" ColumnName="NumberOfSwimmingPools" />
+                <ScalarProperty Name="NumberOfSingleBeds" ColumnName="NumberOfSingleBeds" />
+                <ScalarProperty Name="NumberOfDoubleBeds" ColumnName="NumberOfDoubleBeds" />
+                <ScalarProperty Name="NumberOfSofaBeds" ColumnName="NumberOfSofaBeds" />
+                <ScalarProperty Name="HostingNumber" ColumnName="HostingNumber" />
+                <ScalarProperty Name="RentingTerm" ColumnName="RentingTerm" />
+                <ScalarProperty Name="RentingComment" ColumnName="RentingComment" />
+                <ScalarProperty Name="MinimumRatePerWeek" ColumnName="MinimumRatePerWeek" />
+                <ScalarProperty Name="MinimumRatePerMonth" ColumnName="MinimumRatePerMonth" />
+                <ScalarProperty Name="GVRDecidedRate" ColumnName="GVRDecidedRate" />
+                <ScalarProperty Name="PropertyFurnishingEquiment" ColumnName="PropertyFurnishingEquiment" />
+                <ScalarProperty Name="FurnishingComments" ColumnName="FurnishingComments" />
+                <ScalarProperty Name="ElectricalApplianceComments" ColumnName="ElectricalApplianceComments" />
+                <ScalarProperty Name="OverLookingViewComments" ColumnName="OverLookingViewComments" />
+                <ScalarProperty Name="OveralCondition" ColumnName="OveralCondition" />
+                <ScalarProperty Name="OveralCondationComment" ColumnName="OveralCondationComment" />
+                <ScalarProperty Name="ApprovedStatus" ColumnName="ApprovedStatus" />
+                <ScalarProperty Name="Active" ColumnName="Active" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Unit_ElectricalAppliance">
+            <EntityTypeMapping TypeName="GVRModel.Unit_ElectricalAppliance">
+              <MappingFragment StoreEntitySet="Unit_ElectricalAppliance">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="UnitID" ColumnName="UnitID" />
+                <ScalarProperty Name="ElectricalAplliancID" ColumnName="ElectricalAplliancID" />
+                <ScalarProperty Name="Active" ColumnName="Active" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Unit_OverLookingView">
+            <EntityTypeMapping TypeName="GVRModel.Unit_OverLookingView">
+              <MappingFragment StoreEntitySet="Unit_OverLookingView">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="UnitID" ColumnName="UnitID" />
+                <ScalarProperty Name="OverLookingViewID" ColumnName="OverLookingViewID" />
+                <ScalarProperty Name="Active" ColumnName="Active" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="UnitEditHistory">
+            <EntityTypeMapping TypeName="GVRModel.UnitEditHistory">
+              <MappingFragment StoreEntitySet="UnitEditHistory">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="UnitID" ColumnName="UnitID" />
+                <ScalarProperty Name="PropertyExtNumber" ColumnName="PropertyExtNumber" />
+                <ScalarProperty Name="Location" ColumnName="Location" />
+                <ScalarProperty Name="NumberOfMasterRooms" ColumnName="NumberOfMasterRooms" />
+                <ScalarProperty Name="NumberOfBedRooms" ColumnName="NumberOfBedRooms" />
+                <ScalarProperty Name="NumberOfBathRooms" ColumnName="NumberOfBathRooms" />
+                <ScalarProperty Name="NumberOfMaidRooms" ColumnName="NumberOfMaidRooms" />
+                <ScalarProperty Name="Area" ColumnName="Area" />
+                <ScalarProperty Name="Type" ColumnName="Type" />
+                <ScalarProperty Name="Floor" ColumnName="Floor" />
+                <ScalarProperty Name="NumberOfTrrace" ColumnName="NumberOfTrrace" />
+                <ScalarProperty Name="NumberOfRoof" ColumnName="NumberOfRoof" />
+                <ScalarProperty Name="NumberOfGarden" ColumnName="NumberOfGarden" />
+                <ScalarProperty Name="NumberOfSwimmingPools" ColumnName="NumberOfSwimmingPools" />
+                <ScalarProperty Name="NumberOfSingleBeds" ColumnName="NumberOfSingleBeds" />
+                <ScalarProperty Name="NumberOfDoubleBeds" ColumnName="NumberOfDoubleBeds" />
+                <ScalarProperty Name="NumberOfSofaBeds" ColumnName="NumberOfSofaBeds" />
+                <ScalarProperty Name="HostingNumber" ColumnName="HostingNumber" />
+                <ScalarProperty Name="RentingTerm" ColumnName="RentingTerm" />
+                <ScalarProperty Name="RentingComment" ColumnName="RentingComment" />
+                <ScalarProperty Name="MinimumRatePerWeek" ColumnName="MinimumRatePerWeek" />
+                <ScalarProperty Name="MinimumRatePerMonth" ColumnName="MinimumRatePerMonth" />
+                <ScalarProperty Name="GVRDecidedRate" ColumnName="GVRDecidedRate" />
+                <ScalarProperty Name="PropertyFurnishingEquiment" ColumnName="PropertyFurnishingEquiment" />
+                <ScalarProperty Name="FurnishingComments" ColumnName="FurnishingComments" />
+                <ScalarProperty Name="ElectricalApplianceComments" ColumnName="ElectricalApplianceComments" />
+                <ScalarProperty Name="OverLookingViewComments" ColumnName="OverLookingViewComments" />
+                <ScalarProperty Name="OveralCondition" ColumnName="OveralCondition" />
+                <ScalarProperty Name="OveralCondationComment" ColumnName="OveralCondationComment" />
+                <ScalarProperty Name="EditDate" ColumnName="EditDate" />
+                <ScalarProperty Name="ApprovedStatus" ColumnName="ApprovedStatus" />
+                <ScalarProperty Name="Active" ColumnName="Active" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <FunctionImportMapping FunctionImportName="sp_alterdiagram" FunctionName="GVRModel.Store.sp_alterdiagram" />
+          <FunctionImportMapping FunctionImportName="sp_creatediagram" FunctionName="GVRModel.Store.sp_creatediagram" />
+          <FunctionImportMapping FunctionImportName="sp_dropdiagram" FunctionName="GVRModel.Store.sp_dropdiagram" />
+          <FunctionImportMapping FunctionImportName="sp_helpdiagramdefinition" FunctionName="GVRModel.Store.sp_helpdiagramdefinition">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="GVRModel.sp_helpdiagramdefinition_Result">
+                <ScalarProperty Name="version" ColumnName="version" />
+                <ScalarProperty Name="definition" ColumnName="definition" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="sp_helpdiagrams" FunctionName="GVRModel.Store.sp_helpdiagrams">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="GVRModel.sp_helpdiagrams_Result">
+                <ScalarProperty Name="Database" ColumnName="Database" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="Owner" ColumnName="Owner" />
+                <ScalarProperty Name="OwnerID" ColumnName="OwnerID" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="sp_renamediagram" FunctionName="GVRModel.Store.sp_renamediagram" />
+          <FunctionImportMapping FunctionImportName="sp_upgraddiagrams" FunctionName="GVRModel.Store.sp_upgraddiagrams" />
+          <FunctionImportMapping FunctionImportName="USP_Client_Add" FunctionName="GVRModel.Store.USP_Client_Add" />
+          <FunctionImportMapping FunctionImportName="USP_Client_Delete" FunctionName="GVRModel.Store.USP_Client_Delete" />
+          <FunctionImportMapping FunctionImportName="USP_Client_DeleteById" FunctionName="GVRModel.Store.USP_Client_DeleteById" />
+          <FunctionImportMapping FunctionImportName="USP_Client_GetById" FunctionName="GVRModel.Store.USP_Client_GetById">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="GVRModel.USP_Client_GetById_Result">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="ClientName" ColumnName="ClientName" />
+                <ScalarProperty Name="Occupation" ColumnName="Occupation" />
+                <ScalarProperty Name="HomeAddress" ColumnName="HomeAddress" />
+                <ScalarProperty Name="City" ColumnName="City" />
+                <ScalarProperty Name="Country" ColumnName="Country" />
+                <ScalarProperty Name="Email" ColumnName="Email" />
+                <ScalarProperty Name="Fax" ColumnName="Fax" />
+                <ScalarProperty Name="Type" ColumnName="Type" />
+                <ScalarProperty Name="PostalCode" ColumnName="PostalCode" />
+                <ScalarProperty Name="Work_DayTime_Phone" ColumnName="Work_DayTime_Phone" />
+                <ScalarProperty Name="Home_Evening_Phone" ColumnName="Home_Evening_Phone" />
+                <ScalarProperty Name="MobilePhone" ColumnName="MobilePhone" />
+                <ScalarProperty Name="Active" ColumnName="Active" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="USP_Client_UpdateById" FunctionName="GVRModel.Store.USP_Client_UpdateById" />
+          <FunctionImportMapping FunctionImportName="USP_Currency_Add" FunctionName="GVRModel.Store.USP_Currency_Add" />
+          <FunctionImportMapping FunctionImportName="USP_Currency_Delete" FunctionName="GVRModel.Store.USP_Currency_Delete" />
+          <FunctionImportMapping FunctionImportName="USP_currency_GetById" FunctionName="GVRModel.Store.USP_currency_GetById">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="GVRModel.USP_currency_GetById_Result">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="Currency" ColumnName="Currency" />
+                <ScalarProperty Name="Active" ColumnName="Active" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="USP_Currency_UpdateById" FunctionName="GVRModel.Store.USP_Currency_UpdateById" />
+          <FunctionImportMapping FunctionImportName="USP_ElectricalAppliance_Add" FunctionName="GVRModel.Store.USP_ElectricalAppliance_Add" />
+          <FunctionImportMapping FunctionImportName="USP_ElectricalAppliance_Delete" FunctionName="GVRModel.Store.USP_ElectricalAppliance_Delete" />
+          <FunctionImportMapping FunctionImportName="USP_ElectricalAppliance_GetAll" FunctionName="GVRModel.Store.USP_ElectricalAppliance_GetAll">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="GVRModel.USP_ElectricalAppliance_GetAll_Result">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="ElectricalApplianceName" ColumnName="ElectricalApplianceName" />
+                <ScalarProperty Name="Active" ColumnName="Active" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="USP_ElectricalAppliance_GetById" FunctionName="GVRModel.Store.USP_ElectricalAppliance_GetById">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="GVRModel.USP_ElectricalAppliance_GetById_Result">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="ElectricalApplianceName" ColumnName="ElectricalApplianceName" />
+                <ScalarProperty Name="Active" ColumnName="Active" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="USP_ElectricalAppliance_UpdateById" FunctionName="GVRModel.Store.USP_ElectricalAppliance_UpdateById" />
+          <FunctionImportMapping FunctionImportName="USP_OverLookingView_Add" FunctionName="GVRModel.Store.USP_OverLookingView_Add" />
+          <FunctionImportMapping FunctionImportName="USP_OverLookingView_Delete" FunctionName="GVRModel.Store.USP_OverLookingView_Delete" />
+          <FunctionImportMapping FunctionImportName="USP_OverLookingView_GetAll" FunctionName="GVRModel.Store.USP_OverLookingView_GetAll">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="GVRModel.USP_OverLookingView_GetAll_Result">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="OverLookingView" ColumnName="OverLookingView" />
+                <ScalarProperty Name="Active" ColumnName="Active" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="USP_OverLookingView_GetById" FunctionName="GVRModel.Store.USP_OverLookingView_GetById">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="GVRModel.USP_OverLookingView_GetById_Result">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="OverLookingView" ColumnName="OverLookingView" />
+                <ScalarProperty Name="Active" ColumnName="Active" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="USP_OverLookingView_UpdateById" FunctionName="GVRModel.Store.USP_OverLookingView_UpdateById" />
+          <FunctionImportMapping FunctionImportName="USP_Owner_Currency_Add" FunctionName="GVRModel.Store.USP_Owner_Currency_Add" />
+          <FunctionImportMapping FunctionImportName="USP_Owner_Currency_Delete" FunctionName="GVRModel.Store.USP_Owner_Currency_Delete" />
+          <FunctionImportMapping FunctionImportName="USP_Owner_Currency_UpdateById" FunctionName="GVRModel.Store.USP_Owner_Currency_UpdateById" />
+          <FunctionImportMapping FunctionImportName="USP_OwnerRent_Add" FunctionName="GVRModel.Store.USP_OwnerRent_Add" />
+          <FunctionImportMapping FunctionImportName="USP_OwnerRent_Delete" FunctionName="GVRModel.Store.USP_OwnerRent_Delete" />
+          <FunctionImportMapping FunctionImportName="USP_OwnerRent_UpdateById" FunctionName="GVRModel.Store.USP_OwnerRent_UpdateById" />
+          <FunctionImportMapping FunctionImportName="USP_TanentApplication_Add" FunctionName="GVRModel.Store.USP_TanentApplication_Add" />
+          <FunctionImportMapping FunctionImportName="USP_TanentApplication_Delete" FunctionName="GVRModel.Store.USP_TanentApplication_Delete" />
+          <FunctionImportMapping FunctionImportName="USP_TanentApplication_GetById" FunctionName="GVRModel.Store.USP_TanentApplication_GetById">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="GVRModel.USP_TanentApplication_GetById_Result">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="UnitType" ColumnName="UnitType" />
+                <ScalarProperty Name="NumberOfBedRoom" ColumnName="NumberOfBedRoom" />
+                <ScalarProperty Name="LocationComment" ColumnName="LocationComment" />
+                <ScalarProperty Name="CheckInDate" ColumnName="CheckInDate" />
+                <ScalarProperty Name="CheckOutDate" ColumnName="CheckOutDate" />
+                <ScalarProperty Name="PurposeOfRent" ColumnName="PurposeOfRent" />
+                <ScalarProperty Name="PurposeOfRentComment" ColumnName="PurposeOfRentComment" />
+                <ScalarProperty Name="AirportPickUp" ColumnName="AirportPickUp" />
+                <ScalarProperty Name="AirportPickUpComment" ColumnName="AirportPickUpComment" />
+                <ScalarProperty Name="BudgetFrom" ColumnName="BudgetFrom" />
+                <ScalarProperty Name="BudgetTo" ColumnName="BudgetTo" />
+                <ScalarProperty Name="BudgetComment" ColumnName="BudgetComment" />
+                <ScalarProperty Name="TanentId" ColumnName="TanentId" />
+                <ScalarProperty Name="Active" ColumnName="Active" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="USP_TanentApplication_GetByTanentId" FunctionName="GVRModel.Store.USP_TanentApplication_GetByTanentId">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="GVRModel.USP_TanentApplication_GetByTanentId_Result">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="UnitType" ColumnName="UnitType" />
+                <ScalarProperty Name="NumberOfBedRoom" ColumnName="NumberOfBedRoom" />
+                <ScalarProperty Name="LocationComment" ColumnName="LocationComment" />
+                <ScalarProperty Name="CheckInDate" ColumnName="CheckInDate" />
+                <ScalarProperty Name="CheckOutDate" ColumnName="CheckOutDate" />
+                <ScalarProperty Name="PurposeOfRent" ColumnName="PurposeOfRent" />
+                <ScalarProperty Name="PurposeOfRentComment" ColumnName="PurposeOfRentComment" />
+                <ScalarProperty Name="AirportPickUp" ColumnName="AirportPickUp" />
+                <ScalarProperty Name="AirportPickUpComment" ColumnName="AirportPickUpComment" />
+                <ScalarProperty Name="BudgetFrom" ColumnName="BudgetFrom" />
+                <ScalarProperty Name="BudgetTo" ColumnName="BudgetTo" />
+                <ScalarProperty Name="BudgetComment" ColumnName="BudgetComment" />
+                <ScalarProperty Name="TanentId" ColumnName="TanentId" />
+                <ScalarProperty Name="Active" ColumnName="Active" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="USP_TanentApplication_UpdateById" FunctionName="GVRModel.Store.USP_TanentApplication_UpdateById" />
+          <FunctionImportMapping FunctionImportName="USP_TanentRent_Add" FunctionName="GVRModel.Store.USP_TanentRent_Add" />
+          <FunctionImportMapping FunctionImportName="USP_TanentRent_Delete" FunctionName="GVRModel.Store.USP_TanentRent_Delete" />
+          <FunctionImportMapping FunctionImportName="USP_TanentRent_UpdateById" FunctionName="GVRModel.Store.USP_TanentRent_UpdateById" />
+          <FunctionImportMapping FunctionImportName="USP_Unit_Add" FunctionName="GVRModel.Store.USP_Unit_Add" />
+          <FunctionImportMapping FunctionImportName="USP_Unit_ElectricalAppliance_Add" FunctionName="GVRModel.Store.USP_Unit_ElectricalAppliance_Add" />
+          <FunctionImportMapping FunctionImportName="USP_Unit_ElectricalAppliance_Delete" FunctionName="GVRModel.Store.USP_Unit_ElectricalAppliance_Delete" />
+          <FunctionImportMapping FunctionImportName="USP_Unit_ElectricalAppliance_UpdateById" FunctionName="GVRModel.Store.USP_Unit_ElectricalAppliance_UpdateById" />
+          <FunctionImportMapping FunctionImportName="USP_Unit_GetById" FunctionName="GVRModel.Store.USP_Unit_GetById">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="GVRModel.USP_Unit_GetById_Result">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="OwnerID" ColumnName="OwnerID" />
+                <ScalarProperty Name="PropertyExtNumber" ColumnName="PropertyExtNumber" />
+                <ScalarProperty Name="Location" ColumnName="Location" />
+                <ScalarProperty Name="NumberOfMasterRooms" ColumnName="NumberOfMasterRooms" />
+                <ScalarProperty Name="NumberOfBedRooms" ColumnName="NumberOfBedRooms" />
+                <ScalarProperty Name="NumberOfBathRooms" ColumnName="NumberOfBathRooms" />
+                <ScalarProperty Name="NumberOfMaidRooms" ColumnName="NumberOfMaidRooms" />
+                <ScalarProperty Name="Area" ColumnName="Area" />
+                <ScalarProperty Name="Type" ColumnName="Type" />
+                <ScalarProperty Name="Floor" ColumnName="Floor" />
+                <ScalarProperty Name="NumberOfTrrace" ColumnName="NumberOfTrrace" />
+                <ScalarProperty Name="NumberOfRoof" ColumnName="NumberOfRoof" />
+                <ScalarProperty Name="NumberOfGarden" ColumnName="NumberOfGarden" />
+                <ScalarProperty Name="NumberOfSwimmingPools" ColumnName="NumberOfSwimmingPools" />
+                <ScalarProperty Name="NumberOfSingleBeds" ColumnName="NumberOfSingleBeds" />
+                <ScalarProperty Name="NumberOfDoubleBeds" ColumnName="NumberOfDoubleBeds" />
+                <ScalarProperty Name="NumberOfSofaBeds" ColumnName="NumberOfSofaBeds" />
+                <ScalarProperty Name="HostingNumber" ColumnName="HostingNumber" />
+                <ScalarProperty Name="RentingTerm" ColumnName="RentingTerm" />
+                <ScalarProperty Name="RentingComment" ColumnName="RentingComment" />
+                <ScalarProperty Name="MinimumRatePerWeek" ColumnName="MinimumRatePerWeek" />
+                <ScalarProperty Name="MinimumRatePerMonth" ColumnName="MinimumRatePerMonth" />
+                <ScalarProperty Name="GVRDecidedRate" ColumnName="GVRDecidedRate" />
+                <ScalarProperty Name="PropertyFurnishingEquiment" ColumnName="PropertyFurnishingEquiment" />
+                <ScalarProperty Name="FurnishingComments" ColumnName="FurnishingComments" />
+                <ScalarProperty Name="ElectricalApplianceComments" ColumnName="ElectricalApplianceComments" />
+                <ScalarProperty Name="OverLookingViewComments" ColumnName="OverLookingViewComments" />
+                <ScalarProperty Name="OveralCondition" ColumnName="OveralCondition" />
+                <ScalarProperty Name="OveralCondationComment" ColumnName="OveralCondationComment" />
+                <ScalarProperty Name="ApprovedStatus" ColumnName="ApprovedStatus" />
+                <ScalarProperty Name="Active" ColumnName="Active" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="USP_Unit_GetByOwnerId" FunctionName="GVRModel.Store.USP_Unit_GetByOwnerId">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="GVRModel.USP_Unit_GetByOwnerId_Result">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="OwnerID" ColumnName="OwnerID" />
+                <ScalarProperty Name="PropertyExtNumber" ColumnName="PropertyExtNumber" />
+                <ScalarProperty Name="Location" ColumnName="Location" />
+                <ScalarProperty Name="NumberOfMasterRooms" ColumnName="NumberOfMasterRooms" />
+                <ScalarProperty Name="NumberOfBedRooms" ColumnName="NumberOfBedRooms" />
+                <ScalarProperty Name="NumberOfBathRooms" ColumnName="NumberOfBathRooms" />
+                <ScalarProperty Name="NumberOfMaidRooms" ColumnName="NumberOfMaidRooms" />
+                <ScalarProperty Name="Area" ColumnName="Area" />
+                <ScalarProperty Name="Type" ColumnName="Type" />
+                <ScalarProperty Name="Floor" ColumnName="Floor" />
+                <ScalarProperty Name="NumberOfTrrace" ColumnName="NumberOfTrrace" />
+                <ScalarProperty Name="NumberOfRoof" ColumnName="NumberOfRoof" />
+                <ScalarProperty Name="NumberOfGarden" ColumnName="NumberOfGarden" />
+                <ScalarProperty Name="NumberOfSwimmingPools" ColumnName="NumberOfSwimmingPools" />
+                <ScalarProperty Name="NumberOfSingleBeds" ColumnName="NumberOfSingleBeds" />
+                <ScalarProperty Name="NumberOfDoubleBeds" ColumnName="NumberOfDoubleBeds" />
+                <ScalarProperty Name="NumberOfSofaBeds" ColumnName="NumberOfSofaBeds" />
+                <ScalarProperty Name="HostingNumber" ColumnName="HostingNumber" />
+                <ScalarProperty Name="RentingTerm" ColumnName="RentingTerm" />
+                <ScalarProperty Name="RentingComment" ColumnName="RentingComment" />
+                <ScalarProperty Name="MinimumRatePerWeek" ColumnName="MinimumRatePerWeek" />
+                <ScalarProperty Name="MinimumRatePerMonth" ColumnName="MinimumRatePerMonth" />
+                <ScalarProperty Name="GVRDecidedRate" ColumnName="GVRDecidedRate" />
+                <ScalarProperty Name="PropertyFurnishingEquiment" ColumnName="PropertyFurnishingEquiment" />
+                <ScalarProperty Name="FurnishingComments" ColumnName="FurnishingComments" />
+                <ScalarProperty Name="ElectricalApplianceComments" ColumnName="ElectricalApplianceComments" />
+                <ScalarProperty Name="OverLookingViewComments" ColumnName="OverLookingViewComments" />
+                <ScalarProperty Name="OveralCondition" ColumnName="OveralCondition" />
+                <ScalarProperty Name="OveralCondationComment" ColumnName="OveralCondationComment" />
+                <ScalarProperty Name="ApprovedStatus" ColumnName="ApprovedStatus" />
+                <ScalarProperty Name="Active" ColumnName="Active" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="USP_Unit_OverLookingView_Add" FunctionName="GVRModel.Store.USP_Unit_OverLookingView_Add" />
+          <FunctionImportMapping FunctionImportName="USP_Unit_OverLookingView_Delete" FunctionName="GVRModel.Store.USP_Unit_OverLookingView_Delete" />
+          <FunctionImportMapping FunctionImportName="USP_Unit_OverLookingView_UpdateById" FunctionName="GVRModel.Store.USP_Unit_OverLookingView_UpdateById" />
+          <FunctionImportMapping FunctionImportName="USP_Unit_Search" FunctionName="GVRModel.Store.USP_Unit_Search">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="GVRModel.USP_Unit_Search_Result">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="OwnerID" ColumnName="OwnerID" />
+                <ScalarProperty Name="PropertyExtNumber" ColumnName="PropertyExtNumber" />
+                <ScalarProperty Name="Location" ColumnName="Location" />
+                <ScalarProperty Name="NumberOfMasterRooms" ColumnName="NumberOfMasterRooms" />
+                <ScalarProperty Name="NumberOfBedRooms" ColumnName="NumberOfBedRooms" />
+                <ScalarProperty Name="NumberOfBathRooms" ColumnName="NumberOfBathRooms" />
+                <ScalarProperty Name="NumberOfMaidRooms" ColumnName="NumberOfMaidRooms" />
+                <ScalarProperty Name="Area" ColumnName="Area" />
+                <ScalarProperty Name="Type" ColumnName="Type" />
+                <ScalarProperty Name="Floor" ColumnName="Floor" />
+                <ScalarProperty Name="NumberOfTrrace" ColumnName="NumberOfTrrace" />
+                <ScalarProperty Name="NumberOfRoof" ColumnName="NumberOfRoof" />
+                <ScalarProperty Name="NumberOfGarden" ColumnName="NumberOfGarden" />
+                <ScalarProperty Name="NumberOfSwimmingPools" ColumnName="NumberOfSwimmingPools" />
+                <ScalarProperty Name="NumberOfSingleBeds" ColumnName="NumberOfSingleBeds" />
+                <ScalarProperty Name="NumberOfDoubleBeds" ColumnName="NumberOfDoubleBeds" />
+                <ScalarProperty Name="NumberOfSofaBeds" ColumnName="NumberOfSofaBeds" />
+                <ScalarProperty Name="HostingNumber" ColumnName="HostingNumber" />
+                <ScalarProperty Name="RentingTerm" ColumnName="RentingTerm" />
+                <ScalarProperty Name="RentingComment" ColumnName="RentingComment" />
+                <ScalarProperty Name="MinimumRatePerWeek" ColumnName="MinimumRatePerWeek" />
+                <ScalarProperty Name="MinimumRatePerMonth" ColumnName="MinimumRatePerMonth" />
+                <ScalarProperty Name="GVRDecidedRate" ColumnName="GVRDecidedRate" />
+                <ScalarProperty Name="PropertyFurnishingEquiment" ColumnName="PropertyFurnishingEquiment" />
+                <ScalarProperty Name="FurnishingComments" ColumnName="FurnishingComments" />
+                <ScalarProperty Name="ElectricalApplianceComments" ColumnName="ElectricalApplianceComments" />
+                <ScalarProperty Name="OverLookingViewComments" ColumnName="OverLookingViewComments" />
+                <ScalarProperty Name="OveralCondition" ColumnName="OveralCondition" />
+                <ScalarProperty Name="OveralCondationComment" ColumnName="OveralCondationComment" />
+                <ScalarProperty Name="ApprovedStatus" ColumnName="ApprovedStatus" />
+                <ScalarProperty Name="Active" ColumnName="Active" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="USP_Unit_UpdateById" FunctionName="GVRModel.Store.USP_Unit_UpdateById" />
+          <FunctionImportMapping FunctionImportName="USP_UnitEditHistory_Add" FunctionName="GVRModel.Store.USP_UnitEditHistory_Add" />
+          <FunctionImportMapping FunctionImportName="USP_UnitEditHistory_Delete" FunctionName="GVRModel.Store.USP_UnitEditHistory_Delete" />
+          <FunctionImportMapping FunctionImportName="USP_UnitEditHistory_GetById" FunctionName="GVRModel.Store.USP_UnitEditHistory_GetById">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="GVRModel.USP_UnitEditHistory_GetById_Result">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="UnitID" ColumnName="UnitID" />
+                <ScalarProperty Name="PropertyExtNumber" ColumnName="PropertyExtNumber" />
+                <ScalarProperty Name="Location" ColumnName="Location" />
+                <ScalarProperty Name="NumberOfMasterRooms" ColumnName="NumberOfMasterRooms" />
+                <ScalarProperty Name="NumberOfBedRooms" ColumnName="NumberOfBedRooms" />
+                <ScalarProperty Name="NumberOfBathRooms" ColumnName="NumberOfBathRooms" />
+                <ScalarProperty Name="NumberOfMaidRooms" ColumnName="NumberOfMaidRooms" />
+                <ScalarProperty Name="Area" ColumnName="Area" />
+                <ScalarProperty Name="Type" ColumnName="Type" />
+                <ScalarProperty Name="Floor" ColumnName="Floor" />
+                <ScalarProperty Name="NumberOfTrrace" ColumnName="NumberOfTrrace" />
+                <ScalarProperty Name="NumberOfRoof" ColumnName="NumberOfRoof" />
+                <ScalarProperty Name="NumberOfGarden" ColumnName="NumberOfGarden" />
+                <ScalarProperty Name="NumberOfSwimmingPools" ColumnName="NumberOfSwimmingPools" />
+                <ScalarProperty Name="NumberOfSingleBeds" ColumnName="NumberOfSingleBeds" />
+                <ScalarProperty Name="NumberOfDoubleBeds" ColumnName="NumberOfDoubleBeds" />
+                <ScalarProperty Name="NumberOfSofaBeds" ColumnName="NumberOfSofaBeds" />
+                <ScalarProperty Name="HostingNumber" ColumnName="HostingNumber" />
+                <ScalarProperty Name="RentingTerm" ColumnName="RentingTerm" />
+                <ScalarProperty Name="RentingComment" ColumnName="RentingComment" />
+                <ScalarProperty Name="MinimumRatePerWeek" ColumnName="MinimumRatePerWeek" />
+                <ScalarProperty Name="MinimumRatePerMonth" ColumnName="MinimumRatePerMonth" />
+                <ScalarProperty Name="GVRDecidedRate" ColumnName="GVRDecidedRate" />
+                <ScalarProperty Name="PropertyFurnishingEquiment" ColumnName="PropertyFurnishingEquiment" />
+                <ScalarProperty Name="FurnishingComments" ColumnName="FurnishingComments" />
+                <ScalarProperty Name="ElectricalApplianceComments" ColumnName="ElectricalApplianceComments" />
+                <ScalarProperty Name="OverLookingViewComments" ColumnName="OverLookingViewComments" />
+                <ScalarProperty Name="OveralCondition" ColumnName="OveralCondition" />
+                <ScalarProperty Name="OveralCondationComment" ColumnName="OveralCondationComment" />
+                <ScalarProperty Name="EditDate" ColumnName="EditDate" />
+                <ScalarProperty Name="ApprovedStatus" ColumnName="ApprovedStatus" />
+                <ScalarProperty Name="Active" ColumnName="Active" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="USP_UnitEditHistory_UpdateById" FunctionName="GVRModel.Store.USP_UnitEditHistory_UpdateById" />
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2008/10/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="False" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="True" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

@@ -1,0 +1,59 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPage.master.cs" Inherits="MasterPage" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+<link href="style/style.css" type="text/css" rel="stylesheet" />
+    <title></title>
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+        <form id="Form1" action="#" method="post" runat="server">
+   <div id="header">
+		<a class="logo" href="index.html"><img width="248" height="113" alt="" src="images/logo.jpg"/></a>																																								
+	    <div>
+			
+		  <span>Languages: </span>
+		  <a href="#"><img width="27" height="17" alt="" src="images/l1.gif"/></a>
+		  <a href="#"><img width="27" height="17" alt="" src="images/l2.gif"/></a>
+		  <a href="#"><img width="27" height="17" class="active" alt="" src="images/l3.gif"/></a>
+		  <a href="#"><img width="27" height="17" alt="" src="images/l4.gif"/></a>
+		  <a href="#"><img width="27" height="17" alt="" src="images/l5.gif"/></a>
+		  <span id="account"><a href="#">Sign in</a>  <a href="#">Sign up</a></span>																																																																		
+		</div>
+		<ul id="menu">
+			<li><a href="index.html">Home</a></li>
+			<li><a href="unit.html">Units</a></li>
+			<li><a href="index2.html">Maps</a></li>
+			<li><a href="index2.html">Services</a></li>
+			<li><a href="index2.html">About Company</a></li>
+            <li><a href="index2.html">About el-gouna</a></li>
+			<li><a href="index2.html">Contact us</a></li>
+		</ul>
+	</div>
+    <div id ="content">
+         <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
+        
+        </asp:ContentPlaceHolder>         
+    </div>            
+        
+        
+     <div id="footer">
+		<ul>
+			<li><a href="index.html">Home Page</a> |</li>
+			<li><a href="index2.html">About Company</a> |</li>
+			<li><a href="index2.html">Hot Tours</a> |</li>
+			<li><a href="index2.html">Hotels</a> |</li>
+			<li><a href="index2.html">Services</a> |</li>
+			<li><a href="index2.html">Reviews</a> |</li>
+			<li><a href="index2.html">Partners</a> |</li>
+			<li><a href="index2.html">Contact us</a></li>
+		</ul>
+		<p>Copyright &copy;. All rights reserved. Design by <a class="bft" title="Best Free Templates" target="_blank" href="http://www.bestfreetemplates.info">BFT</a></p>																																																			
+	</div>    
+    
+    </form><!-- End Form Vendor_reg-->
+</body>
+</html>
