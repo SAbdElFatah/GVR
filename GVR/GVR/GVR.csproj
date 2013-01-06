@@ -331,7 +331,9 @@
       <DependentUpon>GVRModel.edmx</DependentUpon>
       <LastGenOutput>GVRModel.cs</LastGenOutput>
     </Content>
-    <Content Include="packages.config" />
+    <Content Include="packages.config">
+      <SubType>Designer</SubType>
+    </Content>
     <Content Include="prettyPhoto_uncompressed_3.1.4\images\.DS_Store" />
     <Content Include="prettyPhoto_uncompressed_3.1.4\images\fullscreen\.DS_Store" />
     <Content Include="prettyPhoto_uncompressed_3.1.4\README" />
