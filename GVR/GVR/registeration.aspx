@@ -1,5 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/MasterPage.master" AutoEventWireup="true" CodeFile="registeration.aspx.cs" Inherits="registeration" %>
-
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/MasterPage.master" AutoEventWireup="True" Codebehind="registeration.aspx.cs" Inherits="registeration"%>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="Server">
     <link href="style/registration.css" rel="stylesheet" type="text/css" />
 </asp:Content>
