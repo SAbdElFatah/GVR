@@ -1,21 +1,22 @@
 ﻿/*CSS for Registeration Page*/
 .usr_reg, .vend_reg {
     width: 440px;
-    height: 615px;
+    height: 1030px;
     float: left;
     padding-top: 20px;
     margin-top: 20px;
 }
 
-.usr_reg h1, .vend_reg h1, .reg_sep h1{
+.usr_reg h1, .vend_reg h1{
+    font-family: Trebuchet MS;
+    color: #ffffff;
+    padding-left: 30px;
+}
+.reg_sep h1{
     font-family: Trebuchet MS;
     color: #ffffff;
     padding-left: 30px;
     text-indent: -9999em;
-}
-
-.usr_reg h1 {
-    background: transparent url('../images/hi_iam_auser.png') no-repeat scroll 0% 0%;
 }
 
 .usr_reg p, .vend_reg p {
@@ -25,21 +26,16 @@
     font-family: Trebuchet MS;
     color: #ffffff;
     font-size: 14px;
-    text-indent: -9999em;
 }
 
 .usr_reg {
-
-    /*background: transparent url('../images/userreg_form_bg.png') no-repeat scroll 0% 0%;*/
     background-color:#D1C6FA;
      border-radius: 7px;
     -moz-border-radius: 7px;
-    -webkit-border-radius: 7px;
-   
+    -webkit-border-radius: 7px; 
 }
 
 .vend_reg {
-   /* background: transparent url('../images/vendorreg_form_bg.png') no-repeat scroll 0% 0%;*/
    background-color:#C6F4FA;
      border-radius: 7px;
     -moz-border-radius: 7px;
@@ -103,8 +99,8 @@
     behavior: url(PIE.htc);
 }
 
-.usr_reg .form select, .vend_reg .form select {
-    background:  transparent url('../images/reg_text_box_bg.png') repeat-x scroll 0% 0%;
+.usr_reg .select, .vend_reg .select {
+    /*background:  transparent url('../images/reg_text_box_bg.png') repeat-x scroll 0% 0%;*/
     border: none;
     padding: 6px;
     max-height: 32px;
@@ -137,24 +133,68 @@
 }
 
 
-.register .btn_cont {
+.btn_cont {
     padding-top: 12px;
+    padding-right:20px;
 }
 
 
-.register .btn {
+.btn {
     border: none;
-    text-indent: -999em;
+    /*text-indent: -999em;*/
     width: 221px;
     height: 42px;
-    margin: 75px 0 0 105px;
+    margin: 28px 0 0 105px;
+    position:relative;
 }
+.Nxt_btn
+{
+    background: transparent url('../images/ForwardBtn.png') no-repeat scroll 0% 0%;
+    float:right;
+    width:100px;
+    height:75px;
+    border:none;
+    
+   
+    }
+    .Back_btn
+    { 
+        background: transparent url('../images/Back Btn.png') no-repeat scroll 0% 0%;
+    float:left;
+    width:100px;
+    height:75px;
+    margin-top:15px;
+    border:none;
+        }
 
-.register .usr_sign_up_btn {
-    background:  transparent url('../images/sign_up_user_btn.png') repeat-x scroll 0% 0%;
-}
+/*.usr_sign_up_btn {
+    /*background:  transparent url('../images/sign_up_user_btn.png') repeat-x scroll 0% 0%;*/
+   /* width:150px;
+    height:40px;
+    margin-left:120px;
+    margin-top:70px;    
+}*/
 
 .register .vnd_sign_up_btn {
     background:  transparent url('../images/sign_up_vendor_btn.png') repeat-x scroll 0% 0%;
     margin-top: 75px;
 }
+    
+    .radioBX
+    {
+     width: 228px;
+    border: none;
+    padding: 7px;
+    max-height: 32px;
+    border-left: 1px solid #999;
+    font:  12px "Trebuchet MS", Arial, Helvetica, sans-serif;
+    color: #666666;
+    border-radius: 7px;
+    -moz-border-radius: 7px;
+    -webkit-border-radius: 7px;
+    /*behavior: url(PIE.htc);*/
+    }
+    .Term_Chkbox
+    {
+        padding-left:40px;
+        }
